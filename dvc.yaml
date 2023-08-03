@@ -1,0 +1,50 @@
+stages:
+  ani500k_large_CC:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_large_CC
+    deps:
+    - data/ani500k_large_CC.model
+    metrics:
+    - nodes/ani500k_large_CC/node-meta.json:
+        cache: false
+  ani500k_large_DFT:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_large_DFT
+    deps:
+    - data/ani500k_large_DFT.model
+    metrics:
+    - nodes/ani500k_large_DFT/node-meta.json:
+        cache: false
+  ani500k_medium_CC:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_medium_CC
+    deps:
+    - data/ani500k_medium_CC.model
+    metrics:
+    - nodes/ani500k_medium_CC/node-meta.json:
+        cache: false
+  ani500k_medium_DFT:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_medium_DFT
+    deps:
+    - data/ani500k_medium_DFT.model
+    metrics:
+    - nodes/ani500k_medium_DFT/node-meta.json:
+        cache: false
+  ani500k_small_CC:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_small_CC
+    deps:
+    - data/ani500k_small_CC.model
+    metrics:
+    - nodes/ani500k_small_CC/node-meta.json:
+        cache: false
+  ani500k_small_DFT:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_small_DFT
+    deps:
+    - data/ani500k_small_DFT.model
+    metrics:
+    - nodes/ani500k_small_DFT/node-meta.json:
+        cache: false
+  hydromace:
+    cmd: zntrack run mace_models.LoadModel --name hydromace
+    deps:
+    - data/qm9_and_spice_hydrogenation.model
+    metrics:
+    - nodes/hydromace/node-meta.json:
+        cache: false
