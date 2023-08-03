@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mace-models"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "mace_models"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+zntrack = {git = "https://github.com/zincware/ZnTrack.git"}
+dvc-s3 = "^2.23.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
