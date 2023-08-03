@@ -40,5 +40,12 @@
             "_type": "pathlib.Path",
             "value": "nodes/ani500k_small_DFT"
         }
+    },
+    "hydromace": {
+        "model_path": "data/qm9_and_spice_hydrogenation.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/hydromace"
+        }
     }
 }

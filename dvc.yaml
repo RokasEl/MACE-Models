@@ -41,3 +41,10 @@ stages:
     metrics:
     - nodes/ani500k_small_DFT/node-meta.json:
         cache: false
+  hydromace:
+    cmd: zntrack run mace_models.LoadModel --name hydromace
+    deps:
+    - data/qm9_and_spice_hydrogenation.model
+    metrics:
+    - nodes/hydromace/node-meta.json:
+        cache: false
