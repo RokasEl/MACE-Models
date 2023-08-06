@@ -1,53 +1,5 @@
 schema: '2.0'
 stages:
-  ani500k_large_CC:
-    cmd: zntrack run mace_models.LoadModel --name ani500k_large_CC
-    deps:
-    - path: data/ani500k_large_CC.model
-      hash: md5
-      md5: e6acc4865e8f442a1bb4672f6acb4d60
-      size: 35632548
-    outs:
-    - path: nodes/ani500k_large_CC/node-meta.json
-      hash: md5
-      md5: 7c67ba1850a6ad81c9783a53a4b92d03
-      size: 48
-  ani500k_large_DFT:
-    cmd: zntrack run mace_models.LoadModel --name ani500k_large_DFT
-    deps:
-    - path: data/ani500k_large_DFT.model
-      hash: md5
-      md5: 85628464bfee0f89cb1146827ae95ca5
-      size: 35631792
-    outs:
-    - path: nodes/ani500k_large_DFT/node-meta.json
-      hash: md5
-      md5: 18f2f5ceee81421ee2826857dca9f23f
-      size: 48
-  ani500k_medium_CC:
-    cmd: zntrack run mace_models.LoadModel --name ani500k_medium_CC
-    deps:
-    - path: data/ani500k_medium_CC.model
-      hash: md5
-      md5: 568d57b7b2fad65eca840de1043cc644
-      size: 11039839
-    outs:
-    - path: nodes/ani500k_medium_CC/node-meta.json
-      hash: md5
-      md5: 02fe5b5ffcbc5fd77a981afcada567f9
-      size: 48
-  ani500k_medium_DFT:
-    cmd: zntrack run mace_models.LoadModel --name ani500k_medium_DFT
-    deps:
-    - path: data/ani500k_medium_DFT.model
-      hash: md5
-      md5: b9c8237ff7406508453b98fc67449bcf
-      size: 11039059
-    outs:
-    - path: nodes/ani500k_medium_DFT/node-meta.json
-      hash: md5
-      md5: fe2e620672cf2d7ead8090d4ac9f4a2a
-      size: 48
   ani500k_small_CC:
     cmd: zntrack run mace_models.LoadModel --name ani500k_small_CC
     deps:
@@ -58,7 +10,7 @@ stages:
     outs:
     - path: nodes/ani500k_small_CC/node-meta.json
       hash: md5
-      md5: 6fe0c45e2912a74c8f708a2960be6120
+      md5: 8105bf7e3dda8e7b36b0d6ff83fc5cce
       size: 48
   ani500k_small_DFT:
     cmd: zntrack run mace_models.LoadModel --name ani500k_small_DFT
@@ -70,7 +22,7 @@ stages:
     outs:
     - path: nodes/ani500k_small_DFT/node-meta.json
       hash: md5
-      md5: b236a8a9bfb635486cd3432677a45343
+      md5: f58f95d157fcb68c7f488cbb4367a3ba
       size: 48
   hydromace:
     cmd: zntrack run mace_models.LoadModel --name hydromace
@@ -83,4 +35,16 @@ stages:
     - path: nodes/hydromace/node-meta.json
       hash: md5
       md5: f534672735e2897a4ef17f926cfa2fba
+      size: 48
+  reference_data:
+    cmd: zntrack run mace_models.XYZReader --name reference_data
+    deps:
+    - path: data/qm9_reference_data.xyz
+      hash: md5
+      md5: e2f1255b6a49f503d3de0f8b1ff78444
+      size: 66841
+    outs:
+    - path: nodes/reference_data/node-meta.json
+      hash: md5
+      md5: a3ae698a0fdeac6d6f642c6ce098e18c
       size: 48

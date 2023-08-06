@@ -1,32 +1,4 @@
 {
-    "ani500k_large_CC": {
-        "model_path": "data/ani500k_large_CC.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/ani500k_large_CC"
-        }
-    },
-    "ani500k_large_DFT": {
-        "model_path": "data/ani500k_large_DFT.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/ani500k_large_DFT"
-        }
-    },
-    "ani500k_medium_CC": {
-        "model_path": "data/ani500k_medium_CC.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/ani500k_medium_CC"
-        }
-    },
-    "ani500k_medium_DFT": {
-        "model_path": "data/ani500k_medium_DFT.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/ani500k_medium_DFT"
-        }
-    },
     "ani500k_small_CC": {
         "model_path": "data/ani500k_small_CC.model",
         "nwd": {
@@ -46,6 +18,13 @@
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/hydromace"
+        }
+    },
+    "reference_data": {
+        "data_path": "data/qm9_reference_data.xyz",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/reference_data"
         }
     }
 }

@@ -11,7 +11,7 @@ python = "^3.8"
 zntrack = {git = "https://github.com/zincware/ZnTrack.git"}
 dvc-s3 = "^2.23.0"
 dvc_gdrive = "^2.0.0"
-
+ase = "^3.22.1"
 
 [build-system]
 requires = ["poetry-core"]
