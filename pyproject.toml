@@ -10,7 +10,6 @@ packages = [{include = "mace_models"}]
 python = "^3.10"
 zntrack = {git = "https://github.com/zincware/ZnTrack.git"}
 dvc-s3 = "^2.23.0"
-dvc_gdrive = "^2.0.0"
 ase = "^3.22.1"
 torch = {version = "^1.13.0", source="torch"}
 mace = {git = "https://github.com/RokasEl/mace.git", rev="extract-embeddings"}

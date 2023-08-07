@@ -1,17 +1,10 @@
 stages:
-  ani500k_small_CC:
-    cmd: zntrack run mace_models.LoadModel --name ani500k_small_CC
-    deps:
-    - data/ani500k_small_CC.model
-    metrics:
-    - nodes/ani500k_small_CC/node-meta.json:
-        cache: false
-  ani500k_small_DFT:
-    cmd: zntrack run mace_models.LoadModel --name ani500k_small_DFT
+  mace_model:
+    cmd: zntrack run mace_models.LoadModel --name mace_model
     deps:
     - data/ani500k_small_DFT.model
     metrics:
-    - nodes/ani500k_small_DFT/node-meta.json:
+    - nodes/mace_model/node-meta.json:
         cache: false
   hydromace:
     cmd: zntrack run mace_models.LoadModel --name hydromace
@@ -26,11 +19,4 @@ stages:
     - data/qm9_reference_data.xyz
     metrics:
     - nodes/reference_data/node-meta.json:
-        cache: false
-  mace_model:
-    cmd: zntrack run mace_models.LoadModel --name mace_model
-    deps:
-    - data/ani500k_small_DFT.model
-    metrics:
-    - nodes/mace_model/node-meta.json:
         cache: false
