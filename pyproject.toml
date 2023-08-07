@@ -15,7 +15,6 @@ torch = {version = "^1.13.0", source="torch"}
 mace = {git = "https://github.com/RokasEl/mace.git", rev="extract-embeddings"}
 hydromace = {git="https://github.com/RokasEl/hydromace.git"}
 zndraw = "0.2.0a4"
-moldiff = {git ="https://github.com/RokasEl/EnergyMolecularDiffusion.git", rev="load_models_from_remote"}
 
 
 [[tool.poetry.source]]
