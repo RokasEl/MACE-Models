@@ -12,14 +12,19 @@ class LoadModel(zntrack.Node):
     @functools.lru_cache()
     def get_model(self, **kwargs) -> torch.nn.Module:
         with self.state.fs.open(self.model_path, 'rb') as f:
-            return torch.load(f, **kwargs)
-
+            if kwargs.get("device", None) is None:
+                return torch.load(f)
+            else:
+                model = torch.load(f, map_location=kwargs["device"])
+                model.to(kwargs["device"])
+                return model
 class XYZReader(zntrack.Node):
     data_path: str = zntrack.dvc.deps()
 
     def run(self) -> None:
         pass
 
+    @functools.lru_cache()
     def get_atoms(self):
-        with self.state.fs.open(self.data_path) as f:
+        with self.state.fs.open(self.data_path, "r") as f:
             return aio.read(f, format="extxyz", index=":")
