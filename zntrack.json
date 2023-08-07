@@ -13,6 +13,13 @@
             "value": "nodes/ani500k_small_DFT"
         }
     },
+    "mace_model": {
+        "model_path": "data/ani500k_small_DFT.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/mace_model"
+        }
+    },
     "hydromace": {
         "model_path": "data/qm9_and_spice_hydrogenation.model",
         "nwd": {

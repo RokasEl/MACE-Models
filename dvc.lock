@@ -48,3 +48,15 @@ stages:
       hash: md5
       md5: a3ae698a0fdeac6d6f642c6ce098e18c
       size: 48
+  mace_model:
+    cmd: zntrack run mace_models.LoadModel --name mace_model
+    deps:
+    - path: data/ani500k_small_DFT.model
+      hash: md5
+      md5: b33a3f83cf2a82b2b8aeafad1f32c36a
+      size: 3347420
+    outs:
+    - path: nodes/mace_model/node-meta.json
+      hash: md5
+      md5: f6120bc92c30a4bc40daf15cb2870356
+      size: 48

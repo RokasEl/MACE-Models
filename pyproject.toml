@@ -7,11 +7,22 @@ readme = "README.md"
 packages = [{include = "mace_models"}]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 zntrack = {git = "https://github.com/zincware/ZnTrack.git"}
 dvc-s3 = "^2.23.0"
 dvc_gdrive = "^2.0.0"
 ase = "^3.22.1"
+torch = {version = "^1.13.0", source="torch"}
+mace = {git = "https://github.com/RokasEl/mace.git", rev="extract-embeddings"}
+hydromace = {git="https://github.com/RokasEl/hydromace.git"}
+zndraw = "0.2.0a4"
+moldiff = {git ="https://github.com/RokasEl/EnergyMolecularDiffusion.git", rev="load_models_from_remote"}
+
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu116"
+secondary = true
 
 [build-system]
 requires = ["poetry-core"]
