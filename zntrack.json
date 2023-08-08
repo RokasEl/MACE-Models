@@ -33,5 +33,12 @@
             "_type": "pathlib.Path",
             "value": "nodes/reference_data"
         }
+    },
+    "linker_examples": {
+        "data_path": "data/zinc_fragments_difflinker.xyz",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linker_examples"
+        }
     }
 }

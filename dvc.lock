@@ -36,3 +36,15 @@ stages:
       hash: md5
       md5: caf056d9a82a7abecdba197edb4d9f22
       size: 48
+  linker_examples:
+    cmd: zntrack run mace_models.XYZReader --name linker_examples
+    deps:
+    - path: data/zinc_fragments_difflinker.xyz
+      hash: md5
+      md5: 2c1c5785f40dab9dfd99e8f6d24d4fce
+      size: 495671
+    outs:
+    - path: nodes/linker_examples/node-meta.json
+      hash: md5
+      md5: 826b73a197cb25fc02f891ef214807c0
+      size: 48

@@ -20,3 +20,10 @@ stages:
     metrics:
     - nodes/reference_data/node-meta.json:
         cache: false
+  linker_examples:
+    cmd: zntrack run mace_models.XYZReader --name linker_examples
+    deps:
+    - data/zinc_fragments_difflinker.xyz
+    metrics:
+    - nodes/linker_examples/node-meta.json:
+        cache: false
