@@ -14,7 +14,7 @@
         }
     },
     "mace_model": {
-        "model_path": "data/ani500k_small_DFT.model",
+        "model_path": "data/SPICE_Mini_for_Gen_swa.model",
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/mace_model"

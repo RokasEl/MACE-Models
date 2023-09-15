@@ -3,14 +3,14 @@ stages:
   mace_model:
     cmd: zntrack run mace_models.LoadModel --name mace_model
     deps:
-    - path: data/ani500k_small_DFT.model
+    - path: data/SPICE_Mini_for_Gen_swa.model
       hash: md5
-      md5: b33a3f83cf2a82b2b8aeafad1f32c36a
-      size: 3347420
+      md5: af6f52e3bbd31742b2f919144551b5b1
+      size: 1172758
     outs:
     - path: nodes/mace_model/node-meta.json
       hash: md5
-      md5: bca2ac68a8d19d4bb430d3add9675f86
+      md5: 7778918e394b559d48403be5c1723ac8
       size: 48
   hydromace:
     cmd: zntrack run mace_models.LoadModel --name hydromace
