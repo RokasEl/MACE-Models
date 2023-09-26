@@ -11,10 +11,10 @@ python = "^3.10"
 zntrack = {git = "https://github.com/zincware/ZnTrack.git"}
 dvc-s3 = "^2.23.0"
 ase = "^3.22.1"
-torch = {version = "^1.13.0", source="torch"}
-mace = {git = "https://github.com/RokasEl/mace.git", rev="extract-embeddings"}
+torch = {version = "^2.0", source="torch"}
+mace = {git = "https://github.com/ACEsuit/mace", rev="develop"}
 hydromace = {git="https://github.com/RokasEl/hydromace.git"}
-zndraw = "0.2.0a5"
+zndraw = "^0.2"
 
 
 [[tool.poetry.source]]
