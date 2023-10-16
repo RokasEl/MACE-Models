@@ -2,7 +2,7 @@ stages:
   mace_model:
     cmd: zntrack run mace_models.LoadModel --name mace_model
     deps:
-    - data/SPICE_Mini_for_Gen_swa.model
+    - data/SPICE_sm_inv_neut_E0_swa.model
     metrics:
     - nodes/mace_model/node-meta.json:
         cache: false

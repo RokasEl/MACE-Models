@@ -14,7 +14,7 @@
         }
     },
     "mace_model": {
-        "model_path": "data/SPICE_Mini_for_Gen_swa.model",
+        "model_path": "data/SPICE_sm_inv_neut_E0_swa.model",
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/mace_model"
