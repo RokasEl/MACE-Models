@@ -1,7 +1,5 @@
 [core]
     remote = origin
 ['remote "origin"']
-    url = s3://dvc/MACE-Models
-    endpointurl = https://minio.pythonf.net
-    access_key_id = mace_models_GEYagh
-    secret_access_key = 0AJJjSyWBheCHJhRNxTaZRUpj7LysqQe
+    url = s3://dvc
+    endpointurl = https://dagshub.com/RokasEl/MACE-Models.s3
