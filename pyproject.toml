@@ -2,7 +2,7 @@
 name = "mace-models"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Rokas Elijošius <re344@cam.ac.uk>", "Fabian Zills <fzills@icp.uni-stuttgart.de>"]
 readme = "README.md"
 packages = [{include = "mace_models"}]
 
