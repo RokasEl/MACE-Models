@@ -4,17 +4,17 @@
 
 Models are taken from https://github.com/ACEsuit/mace/blob/docs/docs/examples/ANI_trained_MACE.zip
 
-Install the Model loader: `pip install git+https://github.com/PythonFZ/MACE-Models` and load the models with:
+Install the Model loader: `pip install mace-models` and load the models with:
 
 ```python
-import zntrack
+import mace_models
 
-model_loader = zntrack.from_rev(
-    "ani500k_large_DFT",
-    remote="https://github.com/PythonFZ/MACE-Models"
+model = mace_models.load(
+    rev="main"
 )
 
-model: "torch.nn.Module" = model_loader.get_model()
+model: "torch.nn.Module" = model.get_model()
+calc: "mace.calculators.MACECalculator" = model.get_calculator()
 ```
 
 Additionally a MACE installation is required:
