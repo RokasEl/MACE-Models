@@ -8,19 +8,13 @@ packages = [{include = "mace_models"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-zntrack = {git = "https://github.com/zincware/ZnTrack.git"}
-dvc-s3 = "^2.23.0"
+zntrack = "^0.7.2"
+dvc-s3 = "^3"
 ase = "^3.22.1"
-torch = {version = "^2.0", source="torch"}
 mace = {git = "https://github.com/ACEsuit/mace", rev="develop"}
 hydromace = {git="https://github.com/RokasEl/hydromace.git"}
 zndraw = "^0.2"
 
-
-[[tool.poetry.source]]
-name = "torch"
-url = "https://download.pytorch.org/whl/cu116"
-secondary = true
 
 [build-system]
 requires = ["poetry-core"]
