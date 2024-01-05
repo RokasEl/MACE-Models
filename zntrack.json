@@ -1,23 +1,9 @@
 {
-    "ani500k_small_CC": {
-        "model_path": "data/ani500k_small_CC.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/ani500k_small_CC"
-        }
-    },
-    "ani500k_small_DFT": {
+    "ani500k_small": {
         "model_path": "data/ani500k_small_DFT.model",
         "nwd": {
             "_type": "pathlib.Path",
-            "value": "nodes/ani500k_small_DFT"
-        }
-    },
-    "mace_model": {
-        "model_path": "data/ani500k_small_DFT.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/mace_model"
+            "value": "nodes/ani500k_small"
         }
     },
     "hydromace": {

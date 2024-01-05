@@ -1,10 +1,10 @@
 stages:
-  mace_model:
-    cmd: zntrack run mace_models.LoadModel --name mace_model
+  ani500k_small:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_small
     deps:
     - data/ani500k_small_DFT.model
     metrics:
-    - nodes/mace_model/node-meta.json:
+    - nodes/ani500k_small/node-meta.json:
         cache: false
   hydromace:
     cmd: zntrack run mace_models.LoadModel --name hydromace
