@@ -1,32 +1,4 @@
 {
-    "ani500k_small": {
-        "model_path": "data/ani500k_small_DFT.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/ani500k_small"
-        }
-    },
-    "hydromace": {
-        "model_path": "data/qm9_and_spice_hydrogenation.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/hydromace"
-        }
-    },
-    "medium_spice": {
-        "model_path": "data/SPICE_sm_inv_neut_E0_swa.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/medium_spice"
-        }
-    },
-    "small_spice": {
-        "model_path": "data/SPICE_Mini_for_Gen_swa.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/small_spice"
-        }
-    },
     "reference_data": {
         "data_path": "data/qm9_reference_data.xyz",
         "nwd": {
@@ -41,8 +13,57 @@
             "value": "nodes/qm9_medium_examples"
         }
     },
+    "ani500k_small": {
+        "info": "\n              The model is released under the MIT license.\n    Note:\n        If you are using this function, please cite the relevant paper associated with the MACE model, ANI dataset, and also the following:\n        - \"Evaluation of the MACE Force Field Architecture by D\u00e1vid P\u00e9ter Kov\u00e1cs, Ilyes Batatia, Eszter S\u00e1ra Arany, and G\u00e1bor Cs\u00e1nyi, The Journal of Chemical Physics, 2023, URL: https://doi.org/10.1063/5.0155322\n            ",
+        "model_path": "data/ani500k_small_DFT.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/ani500k_small"
+        }
+    },
+    "hydromace": {
+        "info": null,
+        "model_path": "data/qm9_and_spice_hydrogenation.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/hydromace"
+        }
+    },
+    "medium_spice": {
+        "info": "\nThe model is released under the ASL license.\n              \n    Note:\n        If you are using this function, please cite the relevant paper by Kovacs et.al., arXiv:2312.15211\n              ",
+        "model_path": "data/SPICE_sm_inv_neut_E0_swa.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/medium_spice"
+        }
+    },
+    "small_spice": {
+        "info": "\nThe model is released under the ASL license.\n              \n    Note:\n        If you are using this function, please cite the relevant paper by Kovacs et.al., arXiv:2312.15211\n              ",
+        "model_path": "data/SPICE_Mini_for_Gen_swa.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/small_spice"
+        }
+    },
+    "simgen_reference_data_small": {
+        "data_path": "data/qm9_reference_data.xyz",
+        "info": "Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_small"
+        }
+    },
+    "simgen_reference_data_medium": {
+        "data_path": "data/qm9_reference_data_medium.xyz",
+        "info": "Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_medium"
+        }
+    },
     "linker_examples": {
         "data_path": "data/zinc_fragments_difflinker.xyz",
+        "info": "Please cite the DiffLinker paper. URL: https://doi.org/10.48550/arXiv.2210.05274",
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/linker_examples"
