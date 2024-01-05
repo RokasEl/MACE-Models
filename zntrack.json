@@ -20,6 +20,13 @@
             "value": "nodes/medium_spice"
         }
     },
+    "small_spice": {
+        "model_path": "data/SPICE_Mini_for_Gen_swa.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/small_spice"
+        }
+    },
     "reference_data": {
         "data_path": "data/qm9_reference_data.xyz",
         "nwd": {

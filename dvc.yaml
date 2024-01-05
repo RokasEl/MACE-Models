@@ -41,3 +41,10 @@ stages:
     metrics:
     - nodes/qm9_medium_examples/node-meta.json:
         cache: false
+  small_spice:
+    cmd: zntrack run mace_models.LoadModel --name small_spice
+    deps:
+    - data/SPICE_Mini_for_Gen_swa.model
+    metrics:
+    - nodes/small_spice/node-meta.json:
+        cache: false

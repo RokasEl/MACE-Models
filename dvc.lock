@@ -72,3 +72,15 @@ stages:
       hash: md5
       md5: 985cf6d365141d1c392499ba5d069c4f
       size: 48
+  small_spice:
+    cmd: zntrack run mace_models.LoadModel --name small_spice
+    deps:
+    - path: data/SPICE_Mini_for_Gen_swa.model
+      hash: md5
+      md5: af6f52e3bbd31742b2f919144551b5b1
+      size: 1172758
+    outs:
+    - path: nodes/small_spice/node-meta.json
+      hash: md5
+      md5: 9e58bfb72757070ce6fb3e3679f55b1b
+      size: 48
