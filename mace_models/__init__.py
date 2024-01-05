@@ -45,6 +45,10 @@ class LoadModel(zntrack.Node):
                 default_dtype=dtype,
             )
 
+    def get_file(self, filename: str = "mace.model") -> None:
+        """Download the model to a file."""
+        self.state.fs.get_file(self.model_path, filename)
+
 
 class XYZReader(zntrack.Node):
     data_path: str = zntrack.deps_path()
