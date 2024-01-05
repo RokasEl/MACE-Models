@@ -48,3 +48,17 @@ stages:
     metrics:
     - nodes/small_spice/node-meta.json:
         cache: false
+  simgen_reference_data_small:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
+    deps:
+    - data/qm9_reference_data.xyz
+    metrics:
+    - nodes/simgen_reference_data_small/node-meta.json:
+        cache: false
+  simgen_reference_data_medium:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_medium
+    deps:
+    - data/qm9_reference_data_medium.xyz
+    metrics:
+    - nodes/simgen_reference_data_medium/node-meta.json:
+        cache: false

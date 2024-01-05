@@ -75,4 +75,20 @@ Models are taken from https://github.com/ACEsuit/mace/blob/docs/docs/examples/AN
 }
 ```
 
+MACE is described in
+```
+@misc{batatiaMACEHigherOrder2022,
+  title = {{{MACE}}: {{Higher Order Equivariant Message Passing Neural Networks}} for {{Fast}} and {{Accurate Force Fields}}},
+  shorttitle = {{{MACE}}},
+  author = {Batatia, Ilyes and Kov{\'a}cs, D{\'a}vid P{\'e}ter and Simm, Gregor N. C. and Ortner, Christoph and Cs{\'a}nyi, G{\'a}bor},
+  year = {2022},
+  number = {arXiv:2206.07697},
+  eprint = {2206.07697},
+  primaryclass = {cond-mat, physics:physics, stat},
+  publisher = {{arXiv}},
+  urldate = {2022-06-19},
+  archiveprefix = {arxiv},
+  langid = {english}
+}
+```
 

@@ -57,6 +57,11 @@ class LoadModel(zntrack.Node):
 
 class XYZReader(zntrack.Node):
     data_path: str = zntrack.deps_path()
+    info: str = zntrack.meta.Text(None)
+    
+    def _post_load_(self) -> None:
+        if self.info is not None:
+            print(self.info)
 
     def run(self) -> None:
         pass
