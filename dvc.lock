@@ -48,3 +48,27 @@ stages:
       hash: md5
       md5: c68b20760876b6c2a21305c222f30910
       size: 48
+  medium_spice:
+    cmd: zntrack run mace_models.LoadModel --name medium_spice
+    deps:
+    - path: data/SPICE_sm_inv_neut_E0_swa.model
+      hash: md5
+      md5: b56ae889b10d1d98e3d3c68604965ece
+      size: 7347350
+    outs:
+    - path: nodes/medium_spice/node-meta.json
+      hash: md5
+      md5: d4664ed9d9f26b3d0e4f1587972fd527
+      size: 48
+  qm9_medium_examples:
+    cmd: zntrack run mace_models.XYZReader --name qm9_medium_examples
+    deps:
+    - path: data/qm9_reference_data_medium.xyz
+      hash: md5
+      md5: e2052b156ad52faceba3bb7f8c4f1e43
+      size: 558035
+    outs:
+    - path: nodes/qm9_medium_examples/node-meta.json
+      hash: md5
+      md5: 985cf6d365141d1c392499ba5d069c4f
+      size: 48
