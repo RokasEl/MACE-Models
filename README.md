@@ -46,6 +46,9 @@ pip install git+https://github.com/ACEsuit/mace.git
 - `hydromace` https://github.com/RokasEl/hydromace
 - `medium_spice` https://arxiv.org/abs/2312.15211
 - `small_spice` https://arxiv.org/abs/2312.15211
+- `MACE-MP-0_large` https://arxiv.org/abs/2401.00096
+- `MACE-MP-0` https://arxiv.org/abs/2401.00096
+- `MACE-MP-0_small` https://arxiv.org/abs/2401.00096
 
 ## Example usages with ASE
 
