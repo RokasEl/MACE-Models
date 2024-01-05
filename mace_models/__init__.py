@@ -19,6 +19,11 @@ You can install it via 'pip install git+https://github.com/ACEsuit/mace.git'
 
 class LoadModel(zntrack.Node):
     model_path: str = zntrack.deps_path()
+    info: str = zntrack.meta.Text(None)
+
+    def _post_load_(self) -> None:
+        if self.info is not None:
+            print(self.info)
 
     def run(self) -> None:
         pass
@@ -65,7 +70,7 @@ class XYZReader(zntrack.Node):
 @functools.wraps(LoadModel.from_rev)
 def load(*args, **kwargs) -> LoadModel:
     if len(args) == 0 and "name" not in kwargs:
-        kwargs["name"] = "mace_model"
+        kwargs["name"] = "medium_spice"
 
     if len(args) == 0 and "remote" not in kwargs:
         kwargs["remote"] = "https://github.com/RokasEl/MACE-Models"

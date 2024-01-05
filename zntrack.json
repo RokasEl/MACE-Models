@@ -1,5 +1,6 @@
 {
     "ani500k_small": {
+        "info": null,
         "model_path": "data/ani500k_small_DFT.model",
         "nwd": {
             "_type": "pathlib.Path",
@@ -7,6 +8,7 @@
         }
     },
     "hydromace": {
+        "info": null,
         "model_path": "data/qm9_and_spice_hydrogenation.model",
         "nwd": {
             "_type": "pathlib.Path",
@@ -14,6 +16,7 @@
         }
     },
     "medium_spice": {
+        "info": "\nThe model is released under the ASL license.\n              \n    Note:\n        If you are using this function, please cite the relevant paper by Kovacs et.al., arXiv:2312.15211\n              ",
         "model_path": "data/SPICE_sm_inv_neut_E0_swa.model",
         "nwd": {
             "_type": "pathlib.Path",
@@ -21,6 +24,7 @@
         }
     },
     "small_spice": {
+        "info": null,
         "model_path": "data/SPICE_Mini_for_Gen_swa.model",
         "nwd": {
             "_type": "pathlib.Path",
