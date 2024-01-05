@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "mace-models"
-version = "0.1.0"
-description = ""
+version = "0.1.1"
+description = "Access pre-trained MACE models"
 authors = ["Rokas Elijošius <re344@cam.ac.uk>", "Fabian Zills <fzills@icp.uni-stuttgart.de>"]
 readme = "README.md"
 packages = [{include = "mace_models"}]
