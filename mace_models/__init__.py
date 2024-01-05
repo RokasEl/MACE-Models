@@ -58,7 +58,7 @@ class LoadModel(zntrack.Node):
 class XYZReader(zntrack.Node):
     data_path: str = zntrack.deps_path()
     info: str = zntrack.meta.Text(None)
-    
+
     def _post_load_(self) -> None:
         if self.info is not None:
             print(self.info)
@@ -73,11 +73,27 @@ class XYZReader(zntrack.Node):
 
 
 @functools.wraps(LoadModel.from_rev)
-def load(*args, **kwargs) -> LoadModel:
-    if len(args) == 0 and "name" not in kwargs:
-        kwargs["name"] = "medium_spice"
+def load(
+    name: str = "medium_spice",
+    remote: str = "https://github.com/RokasEl/MACE-Models",
+    rev: str = None,
+) -> LoadModel:
+    """Load a pre-trained MACE model.
 
-    if len(args) == 0 and "remote" not in kwargs:
-        kwargs["remote"] = "https://github.com/RokasEl/MACE-Models"
+    Parameters
+    ----------
+    name : str, optional
+        The name of the model to load, by default "medium_spice".
+    remote : str, optional
+        The URL of the remote repository where the model is 
+        located, by default "https://github.com/RokasEl/MACE-Models".
+    rev : str, optional
+        The specific revision to load the model from, by default None.
 
-    return LoadModel.from_rev(*args, **kwargs)
+    Returns
+    -------
+    LoadModel
+        The loaded model.
+    """
+
+    return LoadModel.from_rev(name=name, remote=remote, rev=rev)
