@@ -45,6 +45,30 @@
             "value": "nodes/small_spice"
         }
     },
+    "MACE-MP-0_large": {
+        "info": null,
+        "model_path": "data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/MACE-MP-0_large"
+        }
+    },
+    "MACE-MP-0": {
+        "info": null,
+        "model_path": "data/2023-12-03-mace-128-L1_epoch-199.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/MACE-MP-0"
+        }
+    },
+    "MACE-MP-0_small": {
+        "info": null,
+        "model_path": "data/2023-12-10-mace-128-L0_energy_epoch-249.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/MACE-MP-0_small"
+        }
+    },
     "simgen_reference_data_small": {
         "data_path": "data/qm9_reference_data.xyz",
         "info": "Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",

@@ -37,6 +37,21 @@ The model is released under the ASL license.
               """,
     )
 
+    LoadModel(
+        model_path="data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model",
+        name="MACE-MP-0_large",
+    )
+
+    LoadModel(
+        model_path="data/2023-12-03-mace-128-L1_epoch-199.model",
+        name="MACE-MP-0",
+    )
+
+    LoadModel(
+        model_path="data/2023-12-10-mace-128-L0_energy_epoch-249.model",
+        name="MACE-MP-0_small",
+    )
+
     XYZReader(
         data_path="data/qm9_reference_data.xyz",
         name="simgen_reference_data_small",

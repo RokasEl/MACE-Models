@@ -62,3 +62,24 @@ stages:
     metrics:
     - nodes/simgen_reference_data_medium/node-meta.json:
         cache: false
+  MACE-MP-0_large:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_large
+    deps:
+    - data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model
+    metrics:
+    - nodes/MACE-MP-0_large/node-meta.json:
+        cache: false
+  MACE-MP-0:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0
+    deps:
+    - data/2023-12-03-mace-128-L1_epoch-199.model
+    metrics:
+    - nodes/MACE-MP-0/node-meta.json:
+        cache: false
+  MACE-MP-0_small:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_small
+    deps:
+    - data/2023-12-10-mace-128-L0_energy_epoch-249.model
+    metrics:
+    - nodes/MACE-MP-0_small/node-meta.json:
+        cache: false
