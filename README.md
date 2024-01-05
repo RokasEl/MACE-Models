@@ -40,6 +40,28 @@ pip install --upgrade torch --extra-index-url https://download.pytorch.org/whl/c
 pip install git+https://github.com/ACEsuit/mace.git
 ```
 
+# Models
+
+- `ani500k_small` XXX
+- `hydromace` https://github.com/RokasEl/hydromace
+- `medium_spice` https://arxiv.org/abs/2312.15211
+- `small_spice` https://arxiv.org/abs/2312.15211
+
+## Example usages with ASE
+
+```python
+import mace_models
+from ase.build import molecule
+
+model = mace_models.load("medium_spice")
+
+water = molecule("H2O")
+water.calc = model.get_calculator(dtype="float64")
+
+print(water.get_potential_energy())
+>>> -14.159366
+```
+
 # References
 
 Models are taken from https://github.com/ACEsuit/mace/blob/docs/docs/examples/ANI_trained_MACE.zip and from
