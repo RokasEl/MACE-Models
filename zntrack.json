@@ -24,7 +24,7 @@
         }
     },
     "small_spice": {
-        "info": null,
+        "info": "\nThe model is released under the ASL license.\n              \n    Note:\n        If you are using this function, please cite the relevant paper by Kovacs et.al., arXiv:2312.15211\n              ",
         "model_path": "data/SPICE_Mini_for_Gen_swa.model",
         "nwd": {
             "_type": "pathlib.Path",

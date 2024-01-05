@@ -17,7 +17,16 @@ The model is released under the ASL license.
         If you are using this function, please cite the relevant paper by Kovacs et.al., arXiv:2312.15211
               """,
     )
-    LoadModel(model_path="data/SPICE_Mini_for_Gen_swa.model", name="small_spice")
+    LoadModel(
+        model_path="data/SPICE_Mini_for_Gen_swa.model",
+        name="small_spice",
+        info="""
+The model is released under the ASL license.
+              
+    Note:
+        If you are using this function, please cite the relevant paper by Kovacs et.al., arXiv:2312.15211
+              """,
+    )
 
     XYZReader(data_path="data/qm9_reference_data.xyz", name="reference_data")
     XYZReader(
