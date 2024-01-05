@@ -1,8 +1,8 @@
-import zntrack
-import torch
 import functools
+
 import ase.io as aio
-import functools
+import torch
+import zntrack
 
 try:
     from mace.calculators import MACECalculator

@@ -1,16 +1,16 @@
 schema: '2.0'
 stages:
-  mace_model:
-    cmd: zntrack run mace_models.LoadModel --name mace_model
+  ani500k_small:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_small
     deps:
     - path: data/ani500k_small_DFT.model
       hash: md5
       md5: b33a3f83cf2a82b2b8aeafad1f32c36a
       size: 3347420
     outs:
-    - path: nodes/mace_model/node-meta.json
+    - path: nodes/ani500k_small/node-meta.json
       hash: md5
-      md5: bca2ac68a8d19d4bb430d3add9675f86
+      md5: b42bacbabcc21e078d4575e59e6816f6
       size: 48
   hydromace:
     cmd: zntrack run mace_models.LoadModel --name hydromace
@@ -22,7 +22,7 @@ stages:
     outs:
     - path: nodes/hydromace/node-meta.json
       hash: md5
-      md5: bbca3adb626f6eaa073a068774211b41
+      md5: eb141f7b826e0936f00091a35dc3054f
       size: 48
   reference_data:
     cmd: zntrack run mace_models.XYZReader --name reference_data
@@ -34,7 +34,7 @@ stages:
     outs:
     - path: nodes/reference_data/node-meta.json
       hash: md5
-      md5: caf056d9a82a7abecdba197edb4d9f22
+      md5: 626efc409a8ed4e098cb746998781264
       size: 48
   linker_examples:
     cmd: zntrack run mace_models.XYZReader --name linker_examples
@@ -46,5 +46,41 @@ stages:
     outs:
     - path: nodes/linker_examples/node-meta.json
       hash: md5
-      md5: 826b73a197cb25fc02f891ef214807c0
+      md5: c68b20760876b6c2a21305c222f30910
+      size: 48
+  medium_spice:
+    cmd: zntrack run mace_models.LoadModel --name medium_spice
+    deps:
+    - path: data/SPICE_sm_inv_neut_E0_swa.model
+      hash: md5
+      md5: b56ae889b10d1d98e3d3c68604965ece
+      size: 7347350
+    outs:
+    - path: nodes/medium_spice/node-meta.json
+      hash: md5
+      md5: d4664ed9d9f26b3d0e4f1587972fd527
+      size: 48
+  qm9_medium_examples:
+    cmd: zntrack run mace_models.XYZReader --name qm9_medium_examples
+    deps:
+    - path: data/qm9_reference_data_medium.xyz
+      hash: md5
+      md5: e2052b156ad52faceba3bb7f8c4f1e43
+      size: 558035
+    outs:
+    - path: nodes/qm9_medium_examples/node-meta.json
+      hash: md5
+      md5: 985cf6d365141d1c392499ba5d069c4f
+      size: 48
+  small_spice:
+    cmd: zntrack run mace_models.LoadModel --name small_spice
+    deps:
+    - path: data/SPICE_Mini_for_Gen_swa.model
+      hash: md5
+      md5: af6f52e3bbd31742b2f919144551b5b1
+      size: 1172758
+    outs:
+    - path: nodes/small_spice/node-meta.json
+      hash: md5
+      md5: 9e58bfb72757070ce6fb3e3679f55b1b
       size: 48

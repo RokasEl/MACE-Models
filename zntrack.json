@@ -1,23 +1,9 @@
 {
-    "ani500k_small_CC": {
-        "model_path": "data/ani500k_small_CC.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/ani500k_small_CC"
-        }
-    },
-    "ani500k_small_DFT": {
+    "ani500k_small": {
         "model_path": "data/ani500k_small_DFT.model",
         "nwd": {
             "_type": "pathlib.Path",
-            "value": "nodes/ani500k_small_DFT"
-        }
-    },
-    "mace_model": {
-        "model_path": "data/ani500k_small_DFT.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/mace_model"
+            "value": "nodes/ani500k_small"
         }
     },
     "hydromace": {
@@ -27,11 +13,32 @@
             "value": "nodes/hydromace"
         }
     },
+    "medium_spice": {
+        "model_path": "data/SPICE_sm_inv_neut_E0_swa.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/medium_spice"
+        }
+    },
+    "small_spice": {
+        "model_path": "data/SPICE_Mini_for_Gen_swa.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/small_spice"
+        }
+    },
     "reference_data": {
         "data_path": "data/qm9_reference_data.xyz",
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/reference_data"
+        }
+    },
+    "qm9_medium_examples": {
+        "data_path": "data/qm9_reference_data_medium.xyz",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/qm9_medium_examples"
         }
     },
     "linker_examples": {
