@@ -42,7 +42,7 @@ pip install git+https://github.com/ACEsuit/mace.git
 
 # Models
 
-- `ani500k_small` XXX
+- `ani500k_small` training data: https://www.nature.com/articles/sdata2017193
 - `hydromace` https://github.com/RokasEl/hydromace
 - `medium_spice` https://arxiv.org/abs/2312.15211
 - `small_spice` https://arxiv.org/abs/2312.15211
