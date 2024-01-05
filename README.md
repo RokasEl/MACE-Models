@@ -32,6 +32,15 @@ model = mace_models.load(
 )
 ```
 
+> [!TIP]
+> If you want to persist the models locally, use 
+> ```sh
+> git clone https://github.com/RokasEl/MACE-Models
+> cd MACE-Models
+> dvc pull
+> ```
+> and use `mace_models.load(remote="/path/to/MACE-Models")`
+
 
 Ensure a seamless integration by first installing the MACE library and upgrading your PyTorch installation:
 
