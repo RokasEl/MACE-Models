@@ -2,22 +2,38 @@
 [![PyPI version](https://badge.fury.io/py/mace-models.svg)](https://badge.fury.io/py/mace-models)
 
 
-# Pre-trained MACE models
+# MACE models
+Effortlessly integrate pre-trained MACE models into your projects with the user-friendly ``mace-models`` package.
 
-Install the Model loader: `pip install mace-models` and load the models with:
+```sh
+pip install mace-models
+```
+
+Loading models is simple with a few lines of code:
 
 ```python
 import mace_models
 
-model = mace_models.load(
-    rev="main"
-)
-
-model: "torch.nn.Module" = model.get_model()
-calc: "mace.calculators.MACECalculator" = model.get_calculator()
+# Load a default MACE model
+model = mace_models.load()
+torch_model = model.get_model()
+ase_calculator = model.get_calculator()
+# get the model file 
+model.get_file()
 ```
 
-Additionally a MACE installation is required:
+Customize your model selection by loading models from various repositories or specific revisions:
+
+```python
+model = mace_models.load(
+    "<model-name>",
+    rev="<branch-or-sha>",
+    remote="https://github.com/<user>/<repo>"
+)
+```
+
+
+Ensure a seamless integration by first installing the MACE library and upgrading your PyTorch installation:
 
 ```sh
 pip install --upgrade torch --extra-index-url https://download.pytorch.org/whl/cu116
