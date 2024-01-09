@@ -38,7 +38,7 @@ class LoadModel(zntrack.Node):
                 model.to(kwargs["device"])
                 return model
 
-    def get_calculator(self, device=None, dtype="float32") -> MACECalculator:
+    def get_calculator(self, device=None, dtype="float32", **kwargs) -> MACECalculator:
         """Return the ASE calculator."""
         if device is None:
             device = "cuda" if torch.cuda.is_available() else "cpu"
