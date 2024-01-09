@@ -41,6 +41,54 @@ with project:
               """,
     )
 
+    LoadModel(
+        model_path="data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model",
+        name="MACE-MP-0_large",
+        info="""
+        You're using the MACE-MP-0_large model. The model is released under the MIT license.
+        Note:
+        If you are using this model, please cite the relevant paper for the Materials Project,
+        any paper associated with the MACE model, and also the following:
+        - MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b,
+            DOI: 10.57967/hf/1202, URL: https://huggingface.co/cyrusyc/mace-universal
+        - Matbench Discovery by Janosh Riebesell, Rhys EA Goodall, Philipp Benner, Yuan Chiang,
+            Alpha A Lee, Anubhav Jain, Kristin A Persson, 2023, arXiv:2308.14920
+        - https://arxiv.org/abs/2401.00096
+           """,
+    )
+
+    LoadModel(
+        model_path="data/2023-12-03-mace-128-L1_epoch-199.model",
+        name="MACE-MP-0",
+        info="""
+        You're using the MACE-MP-0 model. The model is released under the MIT license.
+        Note:
+        If you are using this model, please cite the relevant paper for the Materials Project,
+        any paper associated with the MACE model, and also the following:
+        - MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b,
+            DOI: 10.57967/hf/1202, URL: https://huggingface.co/cyrusyc/mace-universal
+        - Matbench Discovery by Janosh Riebesell, Rhys EA Goodall, Philipp Benner, Yuan Chiang,
+            Alpha A Lee, Anubhav Jain, Kristin A Persson, 2023, arXiv:2308.14920
+        - https://arxiv.org/abs/2401.00096
+           """,
+    )
+
+    LoadModel(
+        model_path="data/2023-12-10-mace-128-L0_energy_epoch-249.model",
+        name="MACE-MP-0_small",
+        info="""
+        You're using the MACE-MP-0_small model. The model is released under the MIT license.
+        Note:
+        If you are using this model, please cite the relevant paper for the Materials Project,
+        any paper associated with the MACE model, and also the following:
+        - MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b,
+            DOI: 10.57967/hf/1202, URL: https://huggingface.co/cyrusyc/mace-universal
+        - Matbench Discovery by Janosh Riebesell, Rhys EA Goodall, Philipp Benner, Yuan Chiang,
+            Alpha A Lee, Anubhav Jain, Kristin A Persson, 2023, arXiv:2308.14920
+        - https://arxiv.org/abs/2401.00096
+           """,
+    )
+
     XYZReader(
         data_path="data/qm9_reference_data.xyz",
         name="simgen_reference_data_small",

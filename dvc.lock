@@ -108,3 +108,39 @@ stages:
       hash: md5
       md5: 31a7750ea9c526a32976c6f06333e481
       size: 48
+  MACE-MP-0_large:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_large
+    deps:
+    - path: data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model
+      hash: md5
+      md5: b3c72742157485b46892333ec94e666d
+      size: 133800262
+    outs:
+    - path: nodes/MACE-MP-0_large/node-meta.json
+      hash: md5
+      md5: 8cc6ec2659b5bea79a5d5820b1aeb989
+      size: 48
+  MACE-MP-0:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0
+    deps:
+    - path: data/2023-12-03-mace-128-L1_epoch-199.model
+      hash: md5
+      md5: df8f93b7f59fac854f73d1618fb2ba3d
+      size: 44422970
+    outs:
+    - path: nodes/MACE-MP-0/node-meta.json
+      hash: md5
+      md5: accc8a2fcb83d05845ed506eebcf9623
+      size: 48
+  MACE-MP-0_small:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_small
+    deps:
+    - path: data/2023-12-10-mace-128-L0_energy_epoch-249.model
+      hash: md5
+      md5: 46c0d3cef9d863f285918bfaa66380c4
+      size: 32581838
+    outs:
+    - path: nodes/MACE-MP-0_small/node-meta.json
+      hash: md5
+      md5: 07216caf5db26a3957eeecce203f8b00
+      size: 48
