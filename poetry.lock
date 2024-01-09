@@ -1736,13 +1736,15 @@ yaml = ["PyYAML (>=3.10)"]
 zookeeper = ["kazoo (>=2.8.0)"]
 
 [[package]]
-name = "mace"
-version = "0.3.2"
+name = "mace-torch"
+version = "0.3.3"
 description = ""
 optional = false
 python-versions = ">=3.7"
-files = []
-develop = false
+files = [
+    {file = "mace-torch-0.3.3.tar.gz", hash = "sha256:3556d4c0d10e54ad865e461dfaf0327b11b5ac10e5cf22799ecf9098184c48ca"},
+    {file = "mace_torch-0.3.3-py3-none-any.whl", hash = "sha256:36528cc932f46e91b274186119a19811ecaebff1899926710202f0a9f92b461e"},
+]
 
 [package.dependencies]
 ase = "*"
@@ -1750,7 +1752,7 @@ e3nn = "0.4.4"
 matplotlib = "*"
 matscipy = "*"
 numpy = "*"
-opt_einsum = "*"
+opt-einsum = "*"
 pandas = "*"
 prettytable = "*"
 torch = ">=1.12"
@@ -1758,12 +1760,6 @@ torch-ema = "*"
 
 [package.extras]
 wandb = ["wandb"]
-
-[package.source]
-type = "git"
-url = "https://github.com/ACEsuit/mace"
-reference = "HEAD"
-resolved_reference = "68f1bd462ef96aa953310fb07e3abceb3b004ff8"
 
 [[package]]
 name = "markdown-it-py"
@@ -3849,4 +3845,4 @@ znjson = ">=0.2.2,<0.3.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "ed8756508f1ff02715e86da018a8aa5b3cdd1671487823184929ef8e094ac4ae"
+content-hash = "2d9bc0a4c37be540d16f7946a985f47cb3cea89cd51c2390ec679ef5b6807688"
