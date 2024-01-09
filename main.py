@@ -44,16 +44,31 @@ with project:
     LoadModel(
         model_path="data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model",
         name="MACE-MP-0_large",
+        info="""
+        You're using the MACE-MP-0_large model. The model is released under the MIT license.
+        Note:
+        If you are using this function, please cite the relevant paper https://arxiv.org/abs/2401.00096
+           """,
     )
 
     LoadModel(
         model_path="data/2023-12-03-mace-128-L1_epoch-199.model",
         name="MACE-MP-0",
+        info="""
+        You're using the MACE-MP-0 model. The model is released under the MIT license.
+        Note:
+        If you are using this function, please cite the relevant paper https://arxiv.org/abs/2401.00096
+           """,
     )
 
     LoadModel(
         model_path="data/2023-12-10-mace-128-L0_energy_epoch-249.model",
         name="MACE-MP-0_small",
+        info="""
+        You're using the MACE-MP-0_small model. The model is released under the MIT license.
+        Note:
+        If you are using this function, please cite the relevant paper https://arxiv.org/abs/2401.00096
+           """,
     )
 
     XYZReader(
