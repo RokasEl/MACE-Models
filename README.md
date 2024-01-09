@@ -42,13 +42,6 @@ model = mace_models.load(
 > and use `mace_models.load(remote="/path/to/MACE-Models")`
 
 
-Ensure a seamless integration by first installing the MACE library and upgrading your PyTorch installation:
-
-```sh
-pip install --upgrade torch --extra-index-url https://download.pytorch.org/whl/cu116
-pip install git+https://github.com/ACEsuit/mace.git
-```
-
 # Models
 
 - `ani500k_small` training data: https://www.nature.com/articles/sdata2017193
