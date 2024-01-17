@@ -27,26 +27,12 @@ stages:
     metrics:
     - nodes/linker_examples/node-meta.json:
         cache: false
-  medium_spice:
-    cmd: zntrack run mace_models.LoadModel --name medium_spice
-    deps:
-    - data/SPICE_sm_inv_neut_E0_swa.model
-    metrics:
-    - nodes/medium_spice/node-meta.json:
-        cache: false
   qm9_medium_examples:
     cmd: zntrack run mace_models.XYZReader --name qm9_medium_examples
     deps:
     - data/qm9_reference_data_medium.xyz
     metrics:
     - nodes/qm9_medium_examples/node-meta.json:
-        cache: false
-  small_spice:
-    cmd: zntrack run mace_models.LoadModel --name small_spice
-    deps:
-    - data/SPICE_Mini_for_Gen_swa.model
-    metrics:
-    - nodes/small_spice/node-meta.json:
         cache: false
   simgen_reference_data_small:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
