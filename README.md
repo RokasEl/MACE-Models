@@ -44,39 +44,59 @@ model = mace_models.load(
 
 # Models
 
-- `ani500k_small` training data: https://www.nature.com/articles/sdata2017193
+The following models are available under the MIT license:
+
+- `ani500k_small` Model: https://doi.org/10.1063/5.0155322 Training data: https://www.nature.com/articles/sdata2017193
 - `hydromace` https://github.com/RokasEl/hydromace
-- `medium_spice` https://arxiv.org/abs/2312.15211
-- `small_spice` https://arxiv.org/abs/2312.15211
 - `MACE-MP-0_large` https://arxiv.org/abs/2401.00096
 - `MACE-MP-0` https://arxiv.org/abs/2401.00096
 - `MACE-MP-0_small` https://arxiv.org/abs/2401.00096
 
-## Example usages with ASE
+## Example usage with ASE
 
 ```python
 import mace_models
 from ase.build import molecule
 
-model = mace_models.load("medium_spice")
+model = mace_models.load("MACE-MP-0_small")
 
 water = molecule("H2O")
 water.calc = model.get_calculator(dtype="float64")
 
 print(water.get_potential_energy())
->>> -14.159366
+>>> -14.047933366728305
 ```
 
 # References
 
-Models are taken from https://github.com/ACEsuit/mace/blob/docs/docs/examples/ANI_trained_MACE.zip and from
+```
+@article{kovacsEvaluationMACEForce2023,
+  title = {Evaluation of the {{MACE}} Force Field Architecture: {{From}} Medicinal Chemistry to Materials Science},
+  shorttitle = {Evaluation of the {{MACE}} Force Field Architecture},
+  author = {Kov{\'a}cs, D{\'a}vid P{\'e}ter and Batatia, Ilyes and Arany, Eszter S{\'a}ra and Cs{\'a}nyi, G{\'a}bor},
+  year = {2023},
+  journal = {The Journal of Chemical Physics},
+  volume = {159},
+  number = {4},
+  pages = {044118},
+  issn = {0021-9606},
+  doi = {10.1063/5.0155322},
+  urldate = {2024-01-17}
+}
+```
 
 ```
-@misc{kovacsMACEOFF23TransferableMachine2023,
-  title = {MACE-OFF23: Transferable Machine Learning Force Fields for Organic Molecules},
-  author = {Kov{\'a}cs, D{\'a}vid P{\'e}ter and Moore, J. Harry and Browning, Nicholas J. and Batatia, Ilyes and Horton, Joshua T. and Kapil, Venkat and Witt, William C. and Magd{\u a}u, Ioan-Bogdan and Cole, Daniel J. and Cs{\'a}nyi, G{\'a}bor},
+@misc{batatiaFoundationModelAtomistic2023,
+  title = {A Foundation Model for Atomistic Materials Chemistry},
+  author = {Batatia, Ilyes and Benner, Philipp and Chiang, Yuan and Elena, Alin M. and Kov{\'a}cs, D{\'a}vid P. and Riebesell, Janosh and Advincula, Xavier R. and Asta, Mark and Baldwin, William J. and Bernstein, Noam and Bhowmik, Arghya and Blau, Samuel M. and C{\u a}rare, Vlad and Darby, James P. and De, Sandip and Della Pia, Flaviano and Deringer, Volker L. and Elijo{\v s}ius, Rokas and {El-Machachi}, Zakariya and Fako, Edvin and Ferrari, Andrea C. and {Genreith-Schriever}, Annalena and George, Janine and Goodall, Rhys E. A. and Grey, Clare P. and Han, Shuang and Handley, Will and Heenen, Hendrik H. and Hermansson, Kersti and Holm, Christian and Jaafar, Jad and Hofmann, Stephan and Jakob, Konstantin S. and Jung, Hyunwook and Kapil, Venkat and Kaplan, Aaron D. and Karimitari, Nima and Kroupa, Namu and Kullgren, Jolla and Kuner, Matthew C. and Kuryla, Domantas and Liepuoniute, Guoda and Margraf, Johannes T. and Magd{\u a}u, Ioan-Bogdan and Michaelides, Angelos and Moore, J. Harry and Naik, Aakash A. and Niblett, Samuel P. and Norwood, Sam Walton and O'Neill, Niamh and Ortner, Christoph and Persson, Kristin A. and Reuter, Karsten and Rosen, Andrew S. and Schaaf, Lars L. and Schran, Christoph and Sivonxay, Eric and Stenczel, Tam{\'a}s K. and Svahn, Viktor and Sutton, Christopher and {van der Oord}, Cas and {Varga-Umbrich}, Eszter and Vegge, Tejs and Vondr{\'a}k, Martin and Wang, Yangshuai and Witt, William C. and Zills, Fabian and Cs{\'a}nyi, G{\'a}bor},
   year = {2023},
-  number = {arXiv:2312.15211},
+  number = {arXiv:2401.00096},
+  eprint = {2401.00096},
+  primaryclass = {cond-mat, physics:physics},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2401.00096},
+  urldate = {2024-01-17},
+  archiveprefix = {arxiv}
 }
 ```
 
