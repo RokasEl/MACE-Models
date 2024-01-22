@@ -23,25 +23,6 @@ with project:
         """,
     )
     LoadModel(
-        model_path="data/SPICE_sm_inv_neut_E0_swa.model",
-        name="medium_spice",
-        info="""
-        You're using the medium_spice model. The model is released under the Academic Software License (ASL).
-        Note:
-        If you are using this function, please cite the relevant paper by Kovacs et.al., arXiv:2312.15211
-              """,
-    )
-    LoadModel(
-        model_path="data/SPICE_Mini_for_Gen_swa.model",
-        name="small_spice",
-        info="""
-        You're using the small_spice model. The model is released under the Academic Software License (ASL).
-        Note:
-        If you are using this function, please cite the relevant paper by Kovacs et.al., arXiv:2312.15211
-              """,
-    )
-
-    LoadModel(
         model_path="data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model",
         name="MACE-MP-0_large",
         info="""

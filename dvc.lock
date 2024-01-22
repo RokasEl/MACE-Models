@@ -48,18 +48,6 @@ stages:
       hash: md5
       md5: c68b20760876b6c2a21305c222f30910
       size: 48
-  medium_spice:
-    cmd: zntrack run mace_models.LoadModel --name medium_spice
-    deps:
-    - path: data/SPICE_sm_inv_neut_E0_swa.model
-      hash: md5
-      md5: b56ae889b10d1d98e3d3c68604965ece
-      size: 7347350
-    outs:
-    - path: nodes/medium_spice/node-meta.json
-      hash: md5
-      md5: 36e6ae91cdb387cfa1209beae64d95de
-      size: 48
   qm9_medium_examples:
     cmd: zntrack run mace_models.XYZReader --name qm9_medium_examples
     deps:
@@ -71,18 +59,6 @@ stages:
     - path: nodes/qm9_medium_examples/node-meta.json
       hash: md5
       md5: 985cf6d365141d1c392499ba5d069c4f
-      size: 48
-  small_spice:
-    cmd: zntrack run mace_models.LoadModel --name small_spice
-    deps:
-    - path: data/SPICE_Mini_for_Gen_swa.model
-      hash: md5
-      md5: af6f52e3bbd31742b2f919144551b5b1
-      size: 1172758
-    outs:
-    - path: nodes/small_spice/node-meta.json
-      hash: md5
-      md5: 9e58bfb72757070ce6fb3e3679f55b1b
       size: 48
   simgen_reference_data_small:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
