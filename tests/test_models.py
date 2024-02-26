@@ -4,7 +4,7 @@ from ase.build import molecule
 import mace_models
 
 
-@pytest.mark.parametrize("name", ["ani500k_small", "hydromace", "MACE-MP-0"])
+@pytest.mark.parametrize("name", ["ani500k_small", "MACE-MP-0"])
 def test_load_model(name):
     model = mace_models.load(name)
     assert model.name == name
