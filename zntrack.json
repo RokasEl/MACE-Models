@@ -13,22 +13,6 @@
             "value": "nodes/qm9_medium_examples"
         }
     },
-    "ani500k_small": {
-        "info": "\n        You're using the ani500k_small MACE model. The model is released under the MIT license.\n        Note:\n        If you are using this function, please cite the relevant paper associated with the MACE model, ANI dataset, and also the following:\n        - \"Evaluation of the MACE Force Field Architecture by D\u00e1vid P\u00e9ter Kov\u00e1cs, Ilyes Batatia, Eszter S\u00e1ra Arany, and G\u00e1bor Cs\u00e1nyi, The Journal of Chemical Physics, 2023, URL: https://doi.org/10.1063/5.0155322\n            ",
-        "model_path": "data/ani500k_small_DFT.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/ani500k_small"
-        }
-    },
-    "hydromace": {
-        "info": "\n        You're using the hydromace model. The model is released under the MIT license.\n        ",
-        "model_path": "data/qm9_and_spice_hydrogenation.model",
-        "nwd": {
-            "_type": "pathlib.Path",
-            "value": "nodes/hydromace"
-        }
-    },
     "medium_spice": {
         "info": "\n        You're using the medium_spice model. The model is released under the ASL license.\n        Note:\n        If you are using this function, please cite the relevant paper by Kovacs et.al., arXiv:2312.15211\n              ",
         "model_path": "data/SPICE_sm_inv_neut_E0_swa.model",
@@ -43,6 +27,22 @@
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/small_spice"
+        }
+    },
+    "ani500k_small": {
+        "info": "\n        You're using the ani500k_small MACE model. The model is released under the MIT license.\n        Note:\n        If you are using this function, please cite the relevant paper associated with the MACE model, ANI dataset, and also the following:\n        - \"Evaluation of the MACE Force Field Architecture by D\u00e1vid P\u00e9ter Kov\u00e1cs, Ilyes Batatia, Eszter S\u00e1ra Arany, and G\u00e1bor Cs\u00e1nyi, The Journal of Chemical Physics, 2023, URL: https://doi.org/10.1063/5.0155322\n            ",
+        "model_path": "data/ani500k_small_DFT.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/ani500k_small"
+        }
+    },
+    "hydromace": {
+        "info": "\n        You're using the hydromace model. The model is released under the MIT license.\n        ",
+        "model_path": "data/qm9_and_spice_hydrogenation.model",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/hydromace"
         }
     },
     "MACE-MP-0_large": {
