@@ -74,7 +74,7 @@ class XYZReader(zntrack.Node):
 
 @functools.wraps(LoadModel.from_rev)
 def load(
-    name: str = "medium_spice",
+    name: str = "MACE-MP-0",
     remote: str = "https://github.com/RokasEl/MACE-Models",
     rev: str = None,
 ) -> LoadModel:
