@@ -92,5 +92,21 @@
             "_type": "pathlib.Path",
             "value": "nodes/linker_examples"
         }
+    },
+    "OA_parent": {
+        "data_path": "data/OA.xyz",
+        "info": null,
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/OA_parent"
+        }
+    },
+    "OA_ligands": {
+        "data_path": "data/OA_ligands.xyz",
+        "info": null,
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/OA_ligands"
+        }
     }
 }

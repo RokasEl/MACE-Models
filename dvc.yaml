@@ -69,3 +69,17 @@ stages:
     metrics:
     - nodes/MACE-MP-0_small/node-meta.json:
         cache: false
+  OA_parent:
+    cmd: zntrack run mace_models.XYZReader --name OA_parent
+    deps:
+    - data/OA.xyz
+    metrics:
+    - nodes/OA_parent/node-meta.json:
+        cache: false
+  OA_ligands:
+    cmd: zntrack run mace_models.XYZReader --name OA_ligands
+    deps:
+    - data/OA_ligands.xyz
+    metrics:
+    - nodes/OA_ligands/node-meta.json:
+        cache: false

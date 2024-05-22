@@ -85,5 +85,13 @@ with project:
         name="linker_examples",
         info="You're using data from the DiffLinker paper. Please cite https://doi.org/10.48550/arXiv.2210.05274",
     )
+    XYZReader(
+        data_path="data/OA.xyz",
+        name="OA_parent",
+    )
+    XYZReader(
+        data_path="data/OA_ligands.xyz",
+        name="OA_ligands",
+    )
 
 project.run()

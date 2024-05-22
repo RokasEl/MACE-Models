@@ -120,3 +120,27 @@ stages:
       hash: md5
       md5: 07216caf5db26a3957eeecce203f8b00
       size: 48
+  OA_parent:
+    cmd: zntrack run mace_models.XYZReader --name OA_parent
+    deps:
+    - path: data/OA.xyz
+      hash: md5
+      md5: f82a1250e1c347a81b7bd0a4e50fce76
+      size: 4203
+    outs:
+    - path: nodes/OA_parent/node-meta.json
+      hash: md5
+      md5: 39da968568d0dc0ec603745465240317
+      size: 48
+  OA_ligands:
+    cmd: zntrack run mace_models.XYZReader --name OA_ligands
+    deps:
+    - path: data/OA_ligands.xyz
+      hash: md5
+      md5: e330d87ead7ab8c09e294775c51ad38c
+      size: 9224
+    outs:
+    - path: nodes/OA_ligands/node-meta.json
+      hash: md5
+      md5: b1d527fbfac733be215fc3bbf55c0d3b
+      size: 48
