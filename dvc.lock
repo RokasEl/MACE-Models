@@ -17,12 +17,12 @@ stages:
     deps:
     - path: data/qm9_and_spice_hydrogenation.model
       hash: md5
-      md5: a4db7943e1c9421ed7e733bb5276eba9
-      size: 18271553
+      md5: d4ed14179287ab35edf9cf519087ffb1
+      size: 18272799
     outs:
     - path: nodes/hydromace/node-meta.json
       hash: md5
-      md5: ac51b869e0a92241fc16cbcb26db3d3d
+      md5: 18062231c5b0ad51e133c3042395f94b
       size: 64
   reference_data:
     cmd: zntrack run mace_models.XYZReader --name reference_data
