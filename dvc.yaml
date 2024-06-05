@@ -83,3 +83,17 @@ stages:
     metrics:
     - nodes/OA_ligands/node-meta.json:
         cache: false
+  hydromace_qm9_only:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only
+    deps:
+    - data/qm9_only_hydrogenation.model
+    metrics:
+    - nodes/hydromace_qm9_only/node-meta.json:
+        cache: false
+  hydromace_qm9_only_high_noise:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only_high_noise
+    deps:
+    - data/qm9_only_hydrogenation_high_noise.model
+    metrics:
+    - nodes/hydromace_qm9_only_high_noise/node-meta.json:
+        cache: false

@@ -144,3 +144,27 @@ stages:
       hash: md5
       md5: b1d527fbfac733be215fc3bbf55c0d3b
       size: 48
+  hydromace_qm9_only:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only
+    deps:
+    - path: data/qm9_only_hydrogenation.model
+      hash: md5
+      md5: 1bf73fea6c187aea55ef451f268e8091
+      size: 18131399
+    outs:
+    - path: nodes/hydromace_qm9_only/node-meta.json
+      hash: md5
+      md5: 2cfac915f053e7eba9549ec28fa772b8
+      size: 64
+  hydromace_qm9_only_high_noise:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only_high_noise
+    deps:
+    - path: data/qm9_only_hydrogenation_high_noise.model
+      hash: md5
+      md5: fddfea0a112f46f41a362f876400431e
+      size: 18132857
+    outs:
+    - path: nodes/hydromace_qm9_only_high_noise/node-meta.json
+      hash: md5
+      md5: bafdc19f22dfe583c87011b6495ca7b9
+      size: 64

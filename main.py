@@ -23,6 +23,20 @@ with project:
         """,
     )
     LoadModel(
+        model_path="data/qm9_only_hydrogenation.model",
+        name="hydromace_qm9_only",
+        info="""
+        You're using the hydromace model. The model is released under the MIT license.
+        """,
+    )
+    LoadModel(
+        model_path="data/qm9_only_hydrogenation_high_noise.model",
+        name="hydromace_qm9_only_high_noise",
+        info="""
+        You're using the hydromace model. The model is released under the MIT license.
+        """,
+    )
+    LoadModel(
         model_path="data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model",
         name="MACE-MP-0_large",
         info="""
