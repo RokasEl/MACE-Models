@@ -90,7 +90,11 @@ with project:
         - https://arxiv.org/abs/2401.00096
            """,
     )
-
+    XYZReader(
+        data_path="data/qm9_cleaned.xyz",
+        name="qm9_all",
+        info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22 \n These data correspond to using OpenBabel to generate SMILES from the QM9 dataset and removing fragmented or unsatizable molecules.",
+    )
     XYZReader(
         data_path="data/qm9_reference_data.xyz",
         name="simgen_reference_data_small",

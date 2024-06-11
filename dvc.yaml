@@ -104,3 +104,10 @@ stages:
     metrics:
     - nodes/hydromace_spice_only/node-meta.json:
         cache: false
+  qm9_all:
+    cmd: zntrack run mace_models.XYZReader --name qm9_all
+    deps:
+    - data/qm9_cleaned.xyz
+    metrics:
+    - nodes/qm9_all/node-meta.json:
+        cache: false

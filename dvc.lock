@@ -180,3 +180,15 @@ stages:
       hash: md5
       md5: 4f7c78c39bc8d7a707428cb2af0b7761
       size: 64
+  qm9_all:
+    cmd: zntrack run mace_models.XYZReader --name qm9_all
+    deps:
+    - path: data/qm9_cleaned.xyz
+      hash: md5
+      md5: 035118854874f78e603ff517ef09b76a
+      size: 298885228
+    outs:
+    - path: nodes/qm9_all/node-meta.json
+      hash: md5
+      md5: b5170b47cc1f498be9b02056c31668be
+      size: 64
