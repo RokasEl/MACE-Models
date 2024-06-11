@@ -37,6 +37,13 @@ with project:
         """,
     )
     LoadModel(
+        model_path="data/spice_only_hydrogenation.model",
+        name="hydromace_spice_only",
+        info="""
+        You're using the hydromace model. The model is released under the MIT license.
+        """,
+    )
+    LoadModel(
         model_path="data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model",
         name="MACE-MP-0_large",
         info="""

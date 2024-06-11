@@ -168,3 +168,15 @@ stages:
       hash: md5
       md5: bafdc19f22dfe583c87011b6495ca7b9
       size: 64
+  hydromace_spice_only:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_spice_only
+    deps:
+    - path: data/spice_only_hydrogenation.model
+      hash: md5
+      md5: 90d52c850d0a7a6fff7e1ae6492457cf
+      size: 18272563
+    outs:
+    - path: nodes/hydromace_spice_only/node-meta.json
+      hash: md5
+      md5: 4f7c78c39bc8d7a707428cb2af0b7761
+      size: 64
