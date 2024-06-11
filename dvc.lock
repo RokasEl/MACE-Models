@@ -63,27 +63,27 @@ stages:
   simgen_reference_data_small:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
     deps:
-    - path: data/qm9_reference_data.xyz
+    - path: data/simgen_reference_data_small.xyz
       hash: md5
-      md5: e2f1255b6a49f503d3de0f8b1ff78444
-      size: 66841
+      md5: 966b771f36ef646979df7e4626079c61
+      size: 131545
     outs:
     - path: nodes/simgen_reference_data_small/node-meta.json
       hash: md5
-      md5: aa9618465dd1fd2754fbf22b66dcae5f
-      size: 48
+      md5: fd86ddc3af889d25d550efffb365e3de
+      size: 64
   simgen_reference_data_medium:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_medium
     deps:
-    - path: data/qm9_reference_data_medium.xyz
+    - path: data/simgen_reference_data_medium.xyz
       hash: md5
-      md5: e2052b156ad52faceba3bb7f8c4f1e43
-      size: 558035
+      md5: eca5beb25973127dad9b9702afcc6df0
+      size: 279937
     outs:
     - path: nodes/simgen_reference_data_medium/node-meta.json
       hash: md5
-      md5: 31a7750ea9c526a32976c6f06333e481
-      size: 48
+      md5: 7ccf51d4875369fc97855f2af6892a1c
+      size: 64
   MACE-MP-0_large:
     cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_large
     deps:
@@ -191,4 +191,16 @@ stages:
     - path: nodes/qm9_all/node-meta.json
       hash: md5
       md5: b5170b47cc1f498be9b02056c31668be
+      size: 64
+  simgen_reference_data_large:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_large
+    deps:
+    - path: data/simgen_reference_data_large.xyz
+      hash: md5
+      md5: fd721474d02777e84dd66f5be32874c9
+      size: 576624
+    outs:
+    - path: nodes/simgen_reference_data_large/node-meta.json
+      hash: md5
+      md5: edb0a99aa202b972fa8517856b948641
       size: 64

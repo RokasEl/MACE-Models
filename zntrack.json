@@ -95,14 +95,14 @@
     },
     "qm9_all": {
         "data_path": "data/qm9_cleaned.xyz",
-        "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22 \n These data correspond to using OpenBabel to generate SMILES from the QM9 dataset and removing fragmented or unsatizable molecules.",
+        "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22 \n These data correspond to using OpenBabel to generate SMILES from the QM9 dataset and removing fragmented or unsanitizable molecules.",
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/qm9_all"
         }
     },
     "simgen_reference_data_small": {
-        "data_path": "data/qm9_reference_data.xyz",
+        "data_path": "data/simgen_reference_data_small.xyz",
         "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
         "nwd": {
             "_type": "pathlib.Path",
@@ -110,11 +110,19 @@
         }
     },
     "simgen_reference_data_medium": {
-        "data_path": "data/qm9_reference_data_medium.xyz",
+        "data_path": "data/simgen_reference_data_medium.xyz",
         "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/simgen_reference_data_medium"
+        }
+    },
+    "simgen_reference_data_large": {
+        "data_path": "data/simgen_reference_data_large.xyz",
+        "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_large"
         }
     },
     "linker_examples": {

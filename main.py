@@ -96,13 +96,18 @@ with project:
         info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22 \n These data correspond to using OpenBabel to generate SMILES from the QM9 dataset and removing fragmented or unsanitizable molecules.",
     )
     XYZReader(
-        data_path="data/qm9_reference_data.xyz",
+        data_path="data/simgen_reference_data_small.xyz",
         name="simgen_reference_data_small",
         info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
     )
     XYZReader(
-        data_path="data/qm9_reference_data_medium.xyz",
+        data_path="data/simgen_reference_data_medium.xyz",
         name="simgen_reference_data_medium",
+        info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+    )
+    XYZReader(
+        data_path="data/simgen_reference_data_large.xyz",
+        name="simgen_reference_data_large",
         info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
     )
     XYZReader(

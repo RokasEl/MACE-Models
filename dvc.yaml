@@ -37,14 +37,14 @@ stages:
   simgen_reference_data_small:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
     deps:
-    - data/qm9_reference_data.xyz
+    - data/simgen_reference_data_small.xyz
     metrics:
     - nodes/simgen_reference_data_small/node-meta.json:
         cache: false
   simgen_reference_data_medium:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_medium
     deps:
-    - data/qm9_reference_data_medium.xyz
+    - data/simgen_reference_data_medium.xyz
     metrics:
     - nodes/simgen_reference_data_medium/node-meta.json:
         cache: false
@@ -110,4 +110,11 @@ stages:
     - data/qm9_cleaned.xyz
     metrics:
     - nodes/qm9_all/node-meta.json:
+        cache: false
+  simgen_reference_data_large:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_large
+    deps:
+    - data/simgen_reference_data_large.xyz
+    metrics:
+    - nodes/simgen_reference_data_large/node-meta.json:
         cache: false
