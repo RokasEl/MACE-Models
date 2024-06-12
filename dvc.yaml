@@ -118,3 +118,10 @@ stages:
     metrics:
     - nodes/simgen_reference_data_large/node-meta.json:
         cache: false
+  DNA_example:
+    cmd: zntrack run mace_models.XYZReader --name DNA_example
+    deps:
+    - data/dna_example_cut.xyz
+    metrics:
+    - nodes/DNA_example/node-meta.json:
+        cache: false

@@ -133,6 +133,14 @@
             "value": "nodes/linker_examples"
         }
     },
+    "DNA_example": {
+        "data_path": "data/dna_example_cut.xyz",
+        "info": null,
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/DNA_example"
+        }
+    },
     "OA_parent": {
         "data_path": "data/OA.xyz",
         "info": null,

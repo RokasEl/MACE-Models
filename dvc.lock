@@ -204,3 +204,15 @@ stages:
       hash: md5
       md5: edb0a99aa202b972fa8517856b948641
       size: 64
+  DNA_example:
+    cmd: zntrack run mace_models.XYZReader --name DNA_example
+    deps:
+    - path: data/dna_example_cut.xyz
+      hash: md5
+      md5: ec4eea6ba8e50e0a3fbb770d703de5a5
+      size: 27810
+    outs:
+    - path: nodes/DNA_example/node-meta.json
+      hash: md5
+      md5: 1b99a7bbe9fa7e2c738145845b1f82bf
+      size: 64
