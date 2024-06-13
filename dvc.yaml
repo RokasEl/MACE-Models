@@ -125,3 +125,10 @@ stages:
     metrics:
     - nodes/DNA_example/node-meta.json:
         cache: false
+  OA_docked:
+    cmd: zntrack run mace_models.XYZReader --name OA_docked
+    deps:
+    - data/OA_docked.xyz
+    metrics:
+    - nodes/OA_docked/node-meta.json:
+        cache: false

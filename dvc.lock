@@ -216,3 +216,15 @@ stages:
       hash: md5
       md5: 1b99a7bbe9fa7e2c738145845b1f82bf
       size: 64
+  OA_docked:
+    cmd: zntrack run mace_models.XYZReader --name OA_docked
+    deps:
+    - path: data/OA_docked.xyz
+      hash: md5
+      md5: a539606261c3f79fc24ea6c727e5d1c3
+      size: 89384
+    outs:
+    - path: nodes/OA_docked/node-meta.json
+      hash: md5
+      md5: 253fa23096a0d13c6c883ad28e0656f7
+      size: 64

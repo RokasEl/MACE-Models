@@ -156,5 +156,13 @@
             "_type": "pathlib.Path",
             "value": "nodes/OA_ligands"
         }
+    },
+    "OA_docked": {
+        "data_path": "data/OA_docked.xyz",
+        "info": null,
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/OA_docked"
+        }
     }
 }

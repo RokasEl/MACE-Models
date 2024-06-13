@@ -127,5 +127,9 @@ with project:
         data_path="data/OA_ligands.xyz",
         name="OA_ligands",
     )
+    XYZReader(
+        data_path="data/OA_docked.xyz",
+        name="OA_docked",
+    )
 
 project.run()
