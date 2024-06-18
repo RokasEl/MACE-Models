@@ -228,3 +228,39 @@ stages:
       hash: md5
       md5: 253fa23096a0d13c6c883ad28e0656f7
       size: 64
+  simgen_spice_reference_data_small:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_small
+    deps:
+    - path: data/simgen_spice_reference_data_small.xyz
+      hash: md5
+      md5: f9433b61ed669ba94f375dd2b458d818
+      size: 305377
+    outs:
+    - path: nodes/simgen_spice_reference_data_small/node-meta.json
+      hash: md5
+      md5: cf7204c2c0394ff3f5e88552bc82f03e
+      size: 64
+  simgen_spice_reference_data_medium:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_medium
+    deps:
+    - path: data/simgen_spice_reference_data_medium.xyz
+      hash: md5
+      md5: 676af749a5a2a3ee8e81e04e1a767521
+      size: 577548
+    outs:
+    - path: nodes/simgen_spice_reference_data_medium/node-meta.json
+      hash: md5
+      md5: c2b9a9ec98aab18e62f4d98eecbdbe47
+      size: 64
+  simgen_spice_reference_data_large:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_large
+    deps:
+    - path: data/simgen_spice_reference_data_large.xyz
+      hash: md5
+      md5: 2d51833c8864d89feed622c98a2fc83e
+      size: 1063017
+    outs:
+    - path: nodes/simgen_spice_reference_data_large/node-meta.json
+      hash: md5
+      md5: 3b4312e96947ec7976017bfaf94058d0
+      size: 64

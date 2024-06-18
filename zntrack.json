@@ -125,6 +125,30 @@
             "value": "nodes/simgen_reference_data_large"
         }
     },
+    "simgen_spice_reference_data_small": {
+        "data_path": "data/simgen_spice_reference_data_small.xyz",
+        "info": "You're using SPICE data. Please cite the SPICE dataset paper. URL: https://doi.org/10.1038/s41597-022-01882-6",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_spice_reference_data_small"
+        }
+    },
+    "simgen_spice_reference_data_medium": {
+        "data_path": "data/simgen_spice_reference_data_medium.xyz",
+        "info": "You're using SPICE data. Please cite the SPICE dataset paper. URL: https://doi.org/10.1038/s41597-022-01882-6",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_spice_reference_data_medium"
+        }
+    },
+    "simgen_spice_reference_data_large": {
+        "data_path": "data/simgen_spice_reference_data_large.xyz",
+        "info": "You're using SPICE data. Please cite the SPICE dataset paper. URL: https://doi.org/10.1038/s41597-022-01882-6",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_spice_reference_data_large"
+        }
+    },
     "linker_examples": {
         "data_path": "data/zinc_fragments_difflinker.xyz",
         "info": "You're using data from the DiffLinker paper. Please cite https://doi.org/10.48550/arXiv.2210.05274",

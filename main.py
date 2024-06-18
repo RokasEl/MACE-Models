@@ -111,6 +111,21 @@ with project:
         info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
     )
     XYZReader(
+        data_path="data/simgen_spice_reference_data_small.xyz",
+        name="simgen_spice_reference_data_small",
+        info="You're using SPICE data. Please cite the SPICE dataset paper. URL: https://doi.org/10.1038/s41597-022-01882-6",
+    )
+    XYZReader(
+        data_path="data/simgen_spice_reference_data_medium.xyz",
+        name="simgen_spice_reference_data_medium",
+        info="You're using SPICE data. Please cite the SPICE dataset paper. URL: https://doi.org/10.1038/s41597-022-01882-6",
+    )
+    XYZReader(
+        data_path="data/simgen_spice_reference_data_large.xyz",
+        name="simgen_spice_reference_data_large",
+        info="You're using SPICE data. Please cite the SPICE dataset paper. URL: https://doi.org/10.1038/s41597-022-01882-6",
+    )
+    XYZReader(
         data_path="data/zinc_fragments_difflinker.xyz",
         name="linker_examples",
         info="You're using data from the DiffLinker paper. Please cite https://doi.org/10.48550/arXiv.2210.05274",

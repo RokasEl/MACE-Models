@@ -132,3 +132,24 @@ stages:
     metrics:
     - nodes/OA_docked/node-meta.json:
         cache: false
+  simgen_spice_reference_data_small:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_small
+    deps:
+    - data/simgen_spice_reference_data_small.xyz
+    metrics:
+    - nodes/simgen_spice_reference_data_small/node-meta.json:
+        cache: false
+  simgen_spice_reference_data_medium:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_medium
+    deps:
+    - data/simgen_spice_reference_data_medium.xyz
+    metrics:
+    - nodes/simgen_spice_reference_data_medium/node-meta.json:
+        cache: false
+  simgen_spice_reference_data_large:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_large
+    deps:
+    - data/simgen_spice_reference_data_large.xyz
+    metrics:
+    - nodes/simgen_spice_reference_data_large/node-meta.json:
+        cache: false
