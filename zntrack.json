@@ -101,6 +101,14 @@
             "value": "nodes/qm9_all"
         }
     },
+    "hydromace_training": {
+        "data_path": "data/hydromace_training_data_augmented.xyz",
+        "info": "Training data for the hydromace model. Combination of cleaned QM9, subset of SPICE, and augmented with generated molecules.",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/hydromace_training"
+        }
+    },
     "simgen_reference_data_small": {
         "data_path": "data/simgen_reference_data_small.xyz",
         "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",

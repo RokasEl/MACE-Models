@@ -264,3 +264,15 @@ stages:
       hash: md5
       md5: 3b4312e96947ec7976017bfaf94058d0
       size: 64
+  hydromace_training:
+    cmd: zntrack run mace_models.XYZReader --name hydromace_training
+    deps:
+    - path: data/hydromace_training_data_augmented.xyz
+      hash: md5
+      md5: 34cbbbd867919b28ae0310e80d761683
+      size: 488422487
+    outs:
+    - path: nodes/hydromace_training/node-meta.json
+      hash: md5
+      md5: fc87660042e10c5e13e7e8303dc9aafa
+      size: 64

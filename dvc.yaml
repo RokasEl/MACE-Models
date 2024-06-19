@@ -153,3 +153,10 @@ stages:
     metrics:
     - nodes/simgen_spice_reference_data_large/node-meta.json:
         cache: false
+  hydromace_training:
+    cmd: zntrack run mace_models.XYZReader --name hydromace_training
+    deps:
+    - data/hydromace_training_data_augmented.xyz
+    metrics:
+    - nodes/hydromace_training/node-meta.json:
+        cache: false
