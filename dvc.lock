@@ -269,10 +269,10 @@ stages:
     deps:
     - path: data/hydromace_training_data_augmented.xyz
       hash: md5
-      md5: 34cbbbd867919b28ae0310e80d761683
-      size: 488422487
+      md5: 881c28538e6dc0d5a7189f995c4a38a4
+      size: 488977464
     outs:
     - path: nodes/hydromace_training/node-meta.json
       hash: md5
-      md5: fc87660042e10c5e13e7e8303dc9aafa
+      md5: 9e38bf4d428324ea069b2fe605f264e4
       size: 64
