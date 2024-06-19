@@ -44,6 +44,13 @@ with project:
         """,
     )
     LoadModel(
+        model_path="data/augmented_hydrogenation.model",
+        name="augmented_hydromace",
+        info="""
+        You're using the hydromace model. The model is released under the MIT license.
+        """,
+    )
+    LoadModel(
         model_path="data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model",
         name="MACE-MP-0_large",
         info="""

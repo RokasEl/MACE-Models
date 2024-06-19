@@ -160,3 +160,10 @@ stages:
     metrics:
     - nodes/hydromace_training/node-meta.json:
         cache: false
+  augmented_hydromace:
+    cmd: zntrack run mace_models.LoadModel --name augmented_hydromace
+    deps:
+    - data/augmented_hydrogenation.model
+    metrics:
+    - nodes/augmented_hydromace/node-meta.json:
+        cache: false

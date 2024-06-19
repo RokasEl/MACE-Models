@@ -276,3 +276,15 @@ stages:
       hash: md5
       md5: 9e38bf4d428324ea069b2fe605f264e4
       size: 64
+  augmented_hydromace:
+    cmd: zntrack run mace_models.LoadModel --name augmented_hydromace
+    deps:
+    - path: data/augmented_hydrogenation.model
+      hash: md5
+      md5: b7efad7c2bdd4c0c8722db6edf53d5dd
+      size: 18272477
+    outs:
+    - path: nodes/augmented_hydromace/node-meta.json
+      hash: md5
+      md5: f8be8f9c0ddae8d68020533032740d27
+      size: 64
