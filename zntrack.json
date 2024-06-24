@@ -117,6 +117,30 @@
             "value": "nodes/hydromace_training"
         }
     },
+    "simgen_reference_data_nano": {
+        "data_path": "data/simgen_reference_data_nano.xyz",
+        "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_nano"
+        }
+    },
+    "simgen_reference_data_micro": {
+        "data_path": "data/simgen_reference_data_micro.xyz",
+        "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_micro"
+        }
+    },
+    "simgen_reference_data_tiny": {
+        "data_path": "data/simgen_reference_data_tiny.xyz",
+        "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_tiny"
+        }
+    },
     "simgen_reference_data_small": {
         "data_path": "data/simgen_reference_data_small.xyz",
         "info": "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",

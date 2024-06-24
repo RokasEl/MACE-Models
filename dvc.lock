@@ -288,3 +288,39 @@ stages:
       hash: md5
       md5: f8be8f9c0ddae8d68020533032740d27
       size: 64
+  simgen_reference_data_nano:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_nano
+    deps:
+    - path: data/simgen_reference_data_nano.xyz
+      hash: md5
+      md5: e8990e34fb7c597265753d5b0c760f07
+      size: 15103
+    outs:
+    - path: nodes/simgen_reference_data_nano/node-meta.json
+      hash: md5
+      md5: 9b5853eaefdd708663066ec7057b4eb0
+      size: 64
+  simgen_reference_data_micro:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_micro
+    deps:
+    - path: data/simgen_reference_data_micro.xyz
+      hash: md5
+      md5: 8a1da6a4a3a80797ba1389fdbfb598aa
+      size: 34719
+    outs:
+    - path: nodes/simgen_reference_data_micro/node-meta.json
+      hash: md5
+      md5: 8925de618d317a2ef5ace0e32a7f63e7
+      size: 64
+  simgen_reference_data_tiny:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_tiny
+    deps:
+    - path: data/simgen_reference_data_tiny.xyz
+      hash: md5
+      md5: b77841fb2c94ad55103f027372914ee7
+      size: 64795
+    outs:
+    - path: nodes/simgen_reference_data_tiny/node-meta.json
+      hash: md5
+      md5: cd32372f213e5b3d2a511b3e80e4d339
+      size: 64

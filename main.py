@@ -108,6 +108,21 @@ with project:
         info="Training data for the hydromace model. Combination of cleaned QM9, subset of SPICE, and augmented with generated molecules.",
     )
     XYZReader(
+        data_path="data/simgen_reference_data_nano.xyz",
+        name="simgen_reference_data_nano",
+        info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+    )
+    XYZReader(
+        data_path="data/simgen_reference_data_micro.xyz",
+        name="simgen_reference_data_micro",
+        info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+    )
+    XYZReader(
+        data_path="data/simgen_reference_data_tiny.xyz",
+        name="simgen_reference_data_tiny",
+        info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",
+    )
+    XYZReader(
         data_path="data/simgen_reference_data_small.xyz",
         name="simgen_reference_data_small",
         info="You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22",

@@ -167,3 +167,24 @@ stages:
     metrics:
     - nodes/augmented_hydromace/node-meta.json:
         cache: false
+  simgen_reference_data_nano:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_nano
+    deps:
+    - data/simgen_reference_data_nano.xyz
+    metrics:
+    - nodes/simgen_reference_data_nano/node-meta.json:
+        cache: false
+  simgen_reference_data_micro:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_micro
+    deps:
+    - data/simgen_reference_data_micro.xyz
+    metrics:
+    - nodes/simgen_reference_data_micro/node-meta.json:
+        cache: false
+  simgen_reference_data_tiny:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_tiny
+    deps:
+    - data/simgen_reference_data_tiny.xyz
+    metrics:
+    - nodes/simgen_reference_data_tiny/node-meta.json:
+        cache: false
