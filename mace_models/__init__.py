@@ -19,9 +19,9 @@ You can install it via 'pip install git+https://github.com/ACEsuit/mace.git'
 
 class LoadModel(zntrack.Node):
     model_path: str = zntrack.deps_path()
-    info: str = zntrack.meta.Text(None)
+    info: str = zntrack.params(None)
 
-    def _post_load_(self) -> None:
+    def __post_init__(self):
         if self.info is not None:
             print(self.info)
 
@@ -57,7 +57,7 @@ class LoadModel(zntrack.Node):
 
 class XYZReader(zntrack.Node):
     data_path: str = zntrack.deps_path()
-    info: str = zntrack.meta.Text(None)
+    info: str = zntrack.params(None)
 
     def _post_load_(self) -> None:
         if self.info is not None:

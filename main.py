@@ -86,4 +86,4 @@ with project:
         info="You're using data from the DiffLinker paper. Please cite https://doi.org/10.48550/arXiv.2210.05274",
     )
 
-project.run()
+project.repro()
