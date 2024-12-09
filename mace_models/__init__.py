@@ -21,7 +21,7 @@ class LoadModel(zntrack.Node):
     model_path: str = zntrack.deps_path()
     info: str = zntrack.params(None)
 
-    def __post_init__(self):
+    def _post_load_(self) -> None:
         if self.info is not None:
             print(self.info)
 
@@ -76,7 +76,7 @@ class XYZReader(zntrack.Node):
 def load(
     name: str = "MACE-MP-0",
     remote: str = "https://github.com/RokasEl/MACE-Models",
-    rev: str = None,
+    rev: str|None = None,
 ) -> LoadModel:
     """Load a pre-trained MACE model.
 
