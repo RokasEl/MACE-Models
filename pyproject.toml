@@ -11,10 +11,10 @@ repository = "https://github.com/RokasEl/MACE-Models"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-zntrack = "^0.8"
+zntrack = "^0.8.1"
 dvc-s3 = "^3"
-ase = "^3.22.1"
-mace-torch = "^0.3.4"
+ase = "^3.22"
+mace-torch = "^0.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.1.1"
