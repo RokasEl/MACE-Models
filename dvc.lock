@@ -7,11 +7,21 @@ stages:
       hash: md5
       md5: b33a3f83cf2a82b2b8aeafad1f32c36a
       size: 3347420
+    params:
+      params.yaml:
+        ani500k_small:
+          info: "\n        You're using the ani500k_small MACE model. The model is
+            released under the MIT license.\n        Note:\n        If you are using
+            this function, please cite the relevant paper associated with the MACE
+            model, ANI dataset, and also the following:\n        - \"Evaluation of
+            the MACE Force Field Architecture by Dávid Péter Kovács, Ilyes Batatia,
+            Eszter Sára Arany, and Gábor Csányi, The Journal of Chemical Physics,
+            2023, URL: https://doi.org/10.1063/5.0155322\n            "
     outs:
     - path: nodes/ani500k_small/node-meta.json
       hash: md5
-      md5: b42bacbabcc21e078d4575e59e6816f6
-      size: 48
+      md5: e44969b5e52e292f994aeb5cdbfa64a5
+      size: 154
   hydromace:
     cmd: zntrack run mace_models.LoadModel --name hydromace
     deps:
@@ -19,11 +29,16 @@ stages:
       hash: md5
       md5: 55fd4ee8f453f59cd2b48a97c2f0df66
       size: 14021704
+    params:
+      params.yaml:
+        hydromace:
+          info: "\n        You're using the hydromace model. The model is released
+            under the MIT license.\n        "
     outs:
     - path: nodes/hydromace/node-meta.json
       hash: md5
-      md5: eb141f7b826e0936f00091a35dc3054f
-      size: 48
+      md5: 050227d2c9f15a24964f6d169389b7f9
+      size: 154
   reference_data:
     cmd: zntrack run mace_models.XYZReader --name reference_data
     deps:
@@ -43,11 +58,15 @@ stages:
       hash: md5
       md5: 2c1c5785f40dab9dfd99e8f6d24d4fce
       size: 495671
+    params:
+      params.yaml:
+        linker_examples:
+          info: You're using data from the DiffLinker paper. Please cite https://doi.org/10.48550/arXiv.2210.05274
     outs:
     - path: nodes/linker_examples/node-meta.json
       hash: md5
-      md5: c68b20760876b6c2a21305c222f30910
-      size: 48
+      md5: e08cc957d9f375fdebb097cf352c125b
+      size: 154
   qm9_medium_examples:
     cmd: zntrack run mace_models.XYZReader --name qm9_medium_examples
     deps:
@@ -67,11 +86,15 @@ stages:
       hash: md5
       md5: e2f1255b6a49f503d3de0f8b1ff78444
       size: 66841
+    params:
+      params.yaml:
+        simgen_reference_data_small:
+          info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22"
     outs:
     - path: nodes/simgen_reference_data_small/node-meta.json
       hash: md5
-      md5: aa9618465dd1fd2754fbf22b66dcae5f
-      size: 48
+      md5: a31f5b19e8a0c32485bf6f8cb5a5000b
+      size: 154
   simgen_reference_data_medium:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_medium
     deps:
@@ -79,11 +102,15 @@ stages:
       hash: md5
       md5: e2052b156ad52faceba3bb7f8c4f1e43
       size: 558035
+    params:
+      params.yaml:
+        simgen_reference_data_medium:
+          info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22"
     outs:
     - path: nodes/simgen_reference_data_medium/node-meta.json
       hash: md5
-      md5: 31a7750ea9c526a32976c6f06333e481
-      size: 48
+      md5: 7f210bc17b296bd3f3f0d163d5031804
+      size: 153
   MACE-MP-0_large:
     cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_large
     deps:
@@ -91,11 +118,24 @@ stages:
       hash: md5
       md5: b3c72742157485b46892333ec94e666d
       size: 133800262
+    params:
+      params.yaml:
+        MACE-MP-0_large:
+          info: "\n        You're using the MACE-MP-0_large model. The model is released
+            under the MIT license.\n        Note:\n        If you are using this model,
+            please cite the relevant paper for the Materials Project,\n        any
+            paper associated with the MACE model, and also the following:\n      \
+            \  - MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b,\n\
+            \            DOI: 10.57967/hf/1202, URL: https://huggingface.co/cyrusyc/mace-universal\n\
+            \        - Matbench Discovery by Janosh Riebesell, Rhys EA Goodall, Philipp
+            Benner, Yuan Chiang,\n            Alpha A Lee, Anubhav Jain, Kristin A
+            Persson, 2023, arXiv:2308.14920\n        - https://arxiv.org/abs/2401.00096\n\
+            \           "
     outs:
     - path: nodes/MACE-MP-0_large/node-meta.json
       hash: md5
-      md5: 8cc6ec2659b5bea79a5d5820b1aeb989
-      size: 48
+      md5: 7c6fa750ee8ced1108d2df91b99ea553
+      size: 154
   MACE-MP-0:
     cmd: zntrack run mace_models.LoadModel --name MACE-MP-0
     deps:
@@ -103,11 +143,24 @@ stages:
       hash: md5
       md5: df8f93b7f59fac854f73d1618fb2ba3d
       size: 44422970
+    params:
+      params.yaml:
+        MACE-MP-0:
+          info: "\n        You're using the MACE-MP-0 model. The model is released
+            under the MIT license.\n        Note:\n        If you are using this model,
+            please cite the relevant paper for the Materials Project,\n        any
+            paper associated with the MACE model, and also the following:\n      \
+            \  - MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b,\n\
+            \            DOI: 10.57967/hf/1202, URL: https://huggingface.co/cyrusyc/mace-universal\n\
+            \        - Matbench Discovery by Janosh Riebesell, Rhys EA Goodall, Philipp
+            Benner, Yuan Chiang,\n            Alpha A Lee, Anubhav Jain, Kristin A
+            Persson, 2023, arXiv:2308.14920\n        - https://arxiv.org/abs/2401.00096\n\
+            \           "
     outs:
     - path: nodes/MACE-MP-0/node-meta.json
       hash: md5
-      md5: accc8a2fcb83d05845ed506eebcf9623
-      size: 48
+      md5: 0acfdb37c701efe95b929aca1453cf36
+      size: 154
   MACE-MP-0_small:
     cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_small
     deps:
@@ -115,8 +168,21 @@ stages:
       hash: md5
       md5: 46c0d3cef9d863f285918bfaa66380c4
       size: 32581838
+    params:
+      params.yaml:
+        MACE-MP-0_small:
+          info: "\n        You're using the MACE-MP-0_small model. The model is released
+            under the MIT license.\n        Note:\n        If you are using this model,
+            please cite the relevant paper for the Materials Project,\n        any
+            paper associated with the MACE model, and also the following:\n      \
+            \  - MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b,\n\
+            \            DOI: 10.57967/hf/1202, URL: https://huggingface.co/cyrusyc/mace-universal\n\
+            \        - Matbench Discovery by Janosh Riebesell, Rhys EA Goodall, Philipp
+            Benner, Yuan Chiang,\n            Alpha A Lee, Anubhav Jain, Kristin A
+            Persson, 2023, arXiv:2308.14920\n        - https://arxiv.org/abs/2401.00096\n\
+            \           "
     outs:
     - path: nodes/MACE-MP-0_small/node-meta.json
       hash: md5
-      md5: 07216caf5db26a3957eeecce203f8b00
-      size: 48
+      md5: e3350fa8cfc82f0744afb4c54ccf5798
+      size: 154

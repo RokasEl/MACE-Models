@@ -1,1 +1,7 @@
-{"uuid": "474fe515-835f-4c84-9066-b287a35c9880"}
+{
+  "uuid": "06d10f17-edd2-46ba-a91c-263c5043551c",
+  "run_count": 1,
+  "zntrack_version": "0.8.0",
+  "run_time": 1.26199,
+  "package_version": "0.1.4"
+}

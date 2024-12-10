@@ -19,7 +19,7 @@ You can install it via 'pip install git+https://github.com/ACEsuit/mace.git'
 
 class LoadModel(zntrack.Node):
     model_path: str = zntrack.deps_path()
-    info: str = zntrack.meta.Text(None)
+    info: str = zntrack.params(None)
 
     def _post_load_(self) -> None:
         if self.info is not None:
@@ -57,7 +57,7 @@ class LoadModel(zntrack.Node):
 
 class XYZReader(zntrack.Node):
     data_path: str = zntrack.deps_path()
-    info: str = zntrack.meta.Text(None)
+    info: str = zntrack.params(None)
 
     def _post_load_(self) -> None:
         if self.info is not None:
@@ -76,7 +76,7 @@ class XYZReader(zntrack.Node):
 def load(
     name: str = "MACE-MP-0",
     remote: str = "https://github.com/RokasEl/MACE-Models",
-    rev: str = None,
+    rev: str|None = None,
 ) -> LoadModel:
     """Load a pre-trained MACE model.
 

@@ -1,60 +1,4 @@
 stages:
-  ani500k_small:
-    cmd: zntrack run mace_models.LoadModel --name ani500k_small
-    deps:
-    - data/ani500k_small_DFT.model
-    metrics:
-    - nodes/ani500k_small/node-meta.json:
-        cache: false
-  hydromace:
-    cmd: zntrack run mace_models.LoadModel --name hydromace
-    deps:
-    - data/qm9_and_spice_hydrogenation.model
-    metrics:
-    - nodes/hydromace/node-meta.json:
-        cache: false
-  reference_data:
-    cmd: zntrack run mace_models.XYZReader --name reference_data
-    deps:
-    - data/qm9_reference_data.xyz
-    metrics:
-    - nodes/reference_data/node-meta.json:
-        cache: false
-  linker_examples:
-    cmd: zntrack run mace_models.XYZReader --name linker_examples
-    deps:
-    - data/zinc_fragments_difflinker.xyz
-    metrics:
-    - nodes/linker_examples/node-meta.json:
-        cache: false
-  qm9_medium_examples:
-    cmd: zntrack run mace_models.XYZReader --name qm9_medium_examples
-    deps:
-    - data/qm9_reference_data_medium.xyz
-    metrics:
-    - nodes/qm9_medium_examples/node-meta.json:
-        cache: false
-  simgen_reference_data_small:
-    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
-    deps:
-    - data/qm9_reference_data.xyz
-    metrics:
-    - nodes/simgen_reference_data_small/node-meta.json:
-        cache: false
-  simgen_reference_data_medium:
-    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_medium
-    deps:
-    - data/qm9_reference_data_medium.xyz
-    metrics:
-    - nodes/simgen_reference_data_medium/node-meta.json:
-        cache: false
-  MACE-MP-0_large:
-    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_large
-    deps:
-    - data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model
-    metrics:
-    - nodes/MACE-MP-0_large/node-meta.json:
-        cache: false
   MACE-MP-0:
     cmd: zntrack run mace_models.LoadModel --name MACE-MP-0
     deps:
@@ -62,6 +6,17 @@ stages:
     metrics:
     - nodes/MACE-MP-0/node-meta.json:
         cache: false
+    params:
+    - MACE-MP-0
+  MACE-MP-0_large:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_large
+    deps:
+    - data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model
+    metrics:
+    - nodes/MACE-MP-0_large/node-meta.json:
+        cache: false
+    params:
+    - MACE-MP-0_large
   MACE-MP-0_small:
     cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_small
     deps:
@@ -69,3 +24,50 @@ stages:
     metrics:
     - nodes/MACE-MP-0_small/node-meta.json:
         cache: false
+    params:
+    - MACE-MP-0_small
+  ani500k_small:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_small
+    deps:
+    - data/ani500k_small_DFT.model
+    metrics:
+    - nodes/ani500k_small/node-meta.json:
+        cache: false
+    params:
+    - ani500k_small
+  hydromace:
+    cmd: zntrack run mace_models.LoadModel --name hydromace
+    deps:
+    - data/qm9_and_spice_hydrogenation.model
+    metrics:
+    - nodes/hydromace/node-meta.json:
+        cache: false
+    params:
+    - hydromace
+  linker_examples:
+    cmd: zntrack run mace_models.XYZReader --name linker_examples
+    deps:
+    - data/zinc_fragments_difflinker.xyz
+    metrics:
+    - nodes/linker_examples/node-meta.json:
+        cache: false
+    params:
+    - linker_examples
+  simgen_reference_data_medium:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_medium
+    deps:
+    - data/qm9_reference_data_medium.xyz
+    metrics:
+    - nodes/simgen_reference_data_medium/node-meta.json:
+        cache: false
+    params:
+    - simgen_reference_data_medium
+  simgen_reference_data_small:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
+    deps:
+    - data/qm9_reference_data.xyz
+    metrics:
+    - nodes/simgen_reference_data_small/node-meta.json:
+        cache: false
+    params:
+    - simgen_reference_data_small
