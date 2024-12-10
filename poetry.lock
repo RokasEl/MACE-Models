@@ -4243,4 +4243,4 @@ url = "../ZnTrack"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "2b52284351c7c5ac962e700bf14490be1715cfecc9af425e763765f93cd15d93"
+content-hash = "8d0c4cb7ee9e1142c797c0e83ccb8ff46193fc70f1f526316f12900243ba3091"
