@@ -1,6 +1,7 @@
 import functools
 
 import ase.io as aio
+import ase
 import torch
 import zntrack
 
@@ -66,10 +67,12 @@ class XYZReader(zntrack.Node):
     def run(self) -> None:
         pass
 
-    @functools.lru_cache()
-    def get_atoms(self):
-        with self.state.fs.open(self.data_path, "r") as f:
-            return aio.read(f, format="extxyz", index=":")
+    @property
+    def frames(self) -> list[ase.Atoms]:
+        if "frames" not in self.__dict__:
+            with self.state.fs.open(self.data_path, "r") as f:
+                self.__dict__["frames"] = aio.read(f, format="extxyz", index=":")
+        return self.__dict__["frames"]
 
 
 @functools.wraps(LoadModel.from_rev)
