@@ -29,7 +29,6 @@ class LoadModel(zntrack.Node):
     def run(self) -> None:
         pass
 
-    @functools.lru_cache()
     def get_model(self, **kwargs) -> torch.nn.Module:
         with self.state.fs.open(self.model_path, "rb") as f:
             if kwargs.get("device", None) is None:
