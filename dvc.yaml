@@ -1,4 +1,13 @@
 stages:
+  DNA_example:
+    cmd: zntrack run mace_models.XYZReader --name DNA_example
+    deps:
+    - data/dna_example_cut.xyz
+    metrics:
+    - nodes/DNA_example/node-meta.json:
+        cache: false
+    params:
+    - DNA_example
   MACE-MP-0:
     cmd: zntrack run mace_models.LoadModel --name MACE-MP-0
     deps:
@@ -26,6 +35,33 @@ stages:
         cache: false
     params:
     - MACE-MP-0_small
+  OA_docked:
+    cmd: zntrack run mace_models.XYZReader --name OA_docked
+    deps:
+    - data/OA_docked.xyz
+    metrics:
+    - nodes/OA_docked/node-meta.json:
+        cache: false
+    params:
+    - OA_docked
+  OA_ligands:
+    cmd: zntrack run mace_models.XYZReader --name OA_ligands
+    deps:
+    - data/OA_ligands.xyz
+    metrics:
+    - nodes/OA_ligands/node-meta.json:
+        cache: false
+    params:
+    - OA_ligands
+  OA_parent:
+    cmd: zntrack run mace_models.XYZReader --name OA_parent
+    deps:
+    - data/OA.xyz
+    metrics:
+    - nodes/OA_parent/node-meta.json:
+        cache: false
+    params:
+    - OA_parent
   ani500k_small:
     cmd: zntrack run mace_models.LoadModel --name ani500k_small
     deps:
@@ -35,6 +71,15 @@ stages:
         cache: false
     params:
     - ani500k_small
+  augmented_hydromace:
+    cmd: zntrack run mace_models.LoadModel --name augmented_hydromace
+    deps:
+    - data/augmented_hydrogenation.model
+    metrics:
+    - nodes/augmented_hydromace/node-meta.json:
+        cache: false
+    params:
+    - augmented_hydromace
   hydromace:
     cmd: zntrack run mace_models.LoadModel --name hydromace
     deps:
@@ -44,6 +89,42 @@ stages:
         cache: false
     params:
     - hydromace
+  hydromace_qm9_only:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only
+    deps:
+    - data/qm9_only_hydrogenation.model
+    metrics:
+    - nodes/hydromace_qm9_only/node-meta.json:
+        cache: false
+    params:
+    - hydromace_qm9_only
+  hydromace_qm9_only_high_noise:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only_high_noise
+    deps:
+    - data/qm9_only_hydrogenation_high_noise.model
+    metrics:
+    - nodes/hydromace_qm9_only_high_noise/node-meta.json:
+        cache: false
+    params:
+    - hydromace_qm9_only_high_noise
+  hydromace_spice_only:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_spice_only
+    deps:
+    - data/spice_only_hydrogenation.model
+    metrics:
+    - nodes/hydromace_spice_only/node-meta.json:
+        cache: false
+    params:
+    - hydromace_spice_only
+  hydromace_training:
+    cmd: zntrack run mace_models.XYZReader --name hydromace_training
+    deps:
+    - data/hydromace_training_data_augmented.xyz
+    metrics:
+    - nodes/hydromace_training/node-meta.json:
+        cache: false
+    params:
+    - hydromace_training
   linker_examples:
     cmd: zntrack run mace_models.XYZReader --name linker_examples
     deps:
@@ -53,21 +134,93 @@ stages:
         cache: false
     params:
     - linker_examples
+  qm9_all:
+    cmd: zntrack run mace_models.XYZReader --name qm9_all
+    deps:
+    - data/qm9_cleaned.xyz
+    metrics:
+    - nodes/qm9_all/node-meta.json:
+        cache: false
+    params:
+    - qm9_all
+  simgen_reference_data_large:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_large
+    deps:
+    - data/simgen_reference_data_large.xyz
+    metrics:
+    - nodes/simgen_reference_data_large/node-meta.json:
+        cache: false
+    params:
+    - simgen_reference_data_large
   simgen_reference_data_medium:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_medium
     deps:
-    - data/qm9_reference_data_medium.xyz
+    - data/simgen_reference_data_medium.xyz
     metrics:
     - nodes/simgen_reference_data_medium/node-meta.json:
         cache: false
     params:
     - simgen_reference_data_medium
+  simgen_reference_data_micro:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_micro
+    deps:
+    - data/simgen_reference_data_micro.xyz
+    metrics:
+    - nodes/simgen_reference_data_micro/node-meta.json:
+        cache: false
+    params:
+    - simgen_reference_data_micro
+  simgen_reference_data_nano:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_nano
+    deps:
+    - data/simgen_reference_data_nano.xyz
+    metrics:
+    - nodes/simgen_reference_data_nano/node-meta.json:
+        cache: false
+    params:
+    - simgen_reference_data_nano
   simgen_reference_data_small:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
     deps:
-    - data/qm9_reference_data.xyz
+    - data/simgen_reference_data_small.xyz
     metrics:
     - nodes/simgen_reference_data_small/node-meta.json:
         cache: false
     params:
     - simgen_reference_data_small
+  simgen_reference_data_tiny:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_tiny
+    deps:
+    - data/simgen_reference_data_tiny.xyz
+    metrics:
+    - nodes/simgen_reference_data_tiny/node-meta.json:
+        cache: false
+    params:
+    - simgen_reference_data_tiny
+  simgen_spice_reference_data_large:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_large
+    deps:
+    - data/simgen_spice_reference_data_large.xyz
+    metrics:
+    - nodes/simgen_spice_reference_data_large/node-meta.json:
+        cache: false
+    params:
+    - simgen_spice_reference_data_large
+  simgen_spice_reference_data_medium:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_medium
+    deps:
+    - data/simgen_spice_reference_data_medium.xyz
+    metrics:
+    - nodes/simgen_spice_reference_data_medium/node-meta.json:
+        cache: false
+    params:
+    - simgen_spice_reference_data_medium
+  simgen_spice_reference_data_small:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_small
+    deps:
+    - data/simgen_spice_reference_data_small.xyz
+    metrics:
+    - nodes/simgen_spice_reference_data_small/node-meta.json:
+        cache: false
+    params:
+    - simgen_spice_reference_data_small

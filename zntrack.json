@@ -13,6 +13,34 @@
         },
         "model_path": "data/augmented_hydrogenation.model"
     },
+    "hydromace_qm9_only": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/hydromace_qm9_only"
+        },
+        "model_path": "data/qm9_only_hydrogenation.model"
+    },
+    "hydromace_qm9_only_high_noise": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/hydromace_qm9_only_high_noise"
+        },
+        "model_path": "data/qm9_only_hydrogenation_high_noise.model"
+    },
+    "hydromace_spice_only": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/hydromace_spice_only"
+        },
+        "model_path": "data/spice_only_hydrogenation.model"
+    },
+    "augmented_hydromace": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/augmented_hydromace"
+        },
+        "model_path": "data/augmented_hydrogenation.model"
+    },
     "MACE-MP-0_large": {
         "nwd": {
             "_type": "pathlib.Path",
@@ -34,19 +62,82 @@
         },
         "model_path": "data/2023-12-10-mace-128-L0_energy_epoch-249.model"
     },
+    "qm9_all": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/qm9_all"
+        },
+        "data_path": "data/qm9_cleaned.xyz"
+    },
+    "hydromace_training": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/hydromace_training"
+        },
+        "data_path": "data/hydromace_training_data_augmented.xyz"
+    },
+    "simgen_reference_data_nano": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_nano"
+        },
+        "data_path": "data/simgen_reference_data_nano.xyz"
+    },
+    "simgen_reference_data_micro": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_micro"
+        },
+        "data_path": "data/simgen_reference_data_micro.xyz"
+    },
+    "simgen_reference_data_tiny": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_tiny"
+        },
+        "data_path": "data/simgen_reference_data_tiny.xyz"
+    },
     "simgen_reference_data_small": {
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/simgen_reference_data_small"
         },
-        "data_path": "data/qm9_reference_data.xyz"
+        "data_path": "data/simgen_reference_data_small.xyz"
     },
     "simgen_reference_data_medium": {
         "nwd": {
             "_type": "pathlib.Path",
             "value": "nodes/simgen_reference_data_medium"
         },
-        "data_path": "data/qm9_reference_data_medium.xyz"
+        "data_path": "data/simgen_reference_data_medium.xyz"
+    },
+    "simgen_reference_data_large": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_reference_data_large"
+        },
+        "data_path": "data/simgen_reference_data_large.xyz"
+    },
+    "simgen_spice_reference_data_small": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_spice_reference_data_small"
+        },
+        "data_path": "data/simgen_spice_reference_data_small.xyz"
+    },
+    "simgen_spice_reference_data_medium": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_spice_reference_data_medium"
+        },
+        "data_path": "data/simgen_spice_reference_data_medium.xyz"
+    },
+    "simgen_spice_reference_data_large": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/simgen_spice_reference_data_large"
+        },
+        "data_path": "data/simgen_spice_reference_data_large.xyz"
     },
     "linker_examples": {
         "nwd": {
@@ -54,5 +145,33 @@
             "value": "nodes/linker_examples"
         },
         "data_path": "data/zinc_fragments_difflinker.xyz"
+    },
+    "DNA_example": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/DNA_example"
+        },
+        "data_path": "data/dna_example_cut.xyz"
+    },
+    "OA_parent": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/OA_parent"
+        },
+        "data_path": "data/OA.xyz"
+    },
+    "OA_ligands": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/OA_ligands"
+        },
+        "data_path": "data/OA_ligands.xyz"
+    },
+    "OA_docked": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/OA_docked"
+        },
+        "data_path": "data/OA_docked.xyz"
     }
 }
