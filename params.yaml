@@ -1,1 +1,88 @@
-{}
+DNA_example:
+  info: null
+MACE-MP-0:
+  info: "\n        You're using the MACE-MP-0 model. The model is released under the\
+    \ MIT license.\n        Note:\n        If you are using this model, please cite\
+    \ the relevant paper for the Materials Project,\n        any paper associated\
+    \ with the MACE model, and also the following:\n        - MACE-Universal by Yuan\
+    \ Chiang, 2023, Hugging Face, Revision e5ebd9b,\n            DOI: 10.57967/hf/1202,\
+    \ URL: https://huggingface.co/cyrusyc/mace-universal\n        - Matbench Discovery\
+    \ by Janosh Riebesell, Rhys EA Goodall, Philipp Benner, Yuan Chiang,\n       \
+    \     Alpha A Lee, Anubhav Jain, Kristin A Persson, 2023, arXiv:2308.14920\n \
+    \       - https://arxiv.org/abs/2401.00096\n           "
+MACE-MP-0_large:
+  info: "\n        You're using the MACE-MP-0_large model. The model is released under\
+    \ the MIT license.\n        Note:\n        If you are using this model, please\
+    \ cite the relevant paper for the Materials Project,\n        any paper associated\
+    \ with the MACE model, and also the following:\n        - MACE-Universal by Yuan\
+    \ Chiang, 2023, Hugging Face, Revision e5ebd9b,\n            DOI: 10.57967/hf/1202,\
+    \ URL: https://huggingface.co/cyrusyc/mace-universal\n        - Matbench Discovery\
+    \ by Janosh Riebesell, Rhys EA Goodall, Philipp Benner, Yuan Chiang,\n       \
+    \     Alpha A Lee, Anubhav Jain, Kristin A Persson, 2023, arXiv:2308.14920\n \
+    \       - https://arxiv.org/abs/2401.00096\n           "
+MACE-MP-0_small:
+  info: "\n        You're using the MACE-MP-0_small model. The model is released under\
+    \ the MIT license.\n        Note:\n        If you are using this model, please\
+    \ cite the relevant paper for the Materials Project,\n        any paper associated\
+    \ with the MACE model, and also the following:\n        - MACE-Universal by Yuan\
+    \ Chiang, 2023, Hugging Face, Revision e5ebd9b,\n            DOI: 10.57967/hf/1202,\
+    \ URL: https://huggingface.co/cyrusyc/mace-universal\n        - Matbench Discovery\
+    \ by Janosh Riebesell, Rhys EA Goodall, Philipp Benner, Yuan Chiang,\n       \
+    \     Alpha A Lee, Anubhav Jain, Kristin A Persson, 2023, arXiv:2308.14920\n \
+    \       - https://arxiv.org/abs/2401.00096\n           "
+OA_docked:
+  info: null
+OA_ligands:
+  info: null
+OA_parent:
+  info: null
+ani500k_small:
+  info: "\n        You're using the ani500k_small MACE model. The model is released\
+    \ under the MIT license.\n        Note:\n        If you are using this function,\
+    \ please cite the relevant paper associated with the MACE model, ANI dataset,\
+    \ and also the following:\n        - \"Evaluation of the MACE Force Field Architecture\
+    \ by D\xE1vid P\xE9ter Kov\xE1cs, Ilyes Batatia, Eszter S\xE1ra Arany, and G\xE1\
+    bor Cs\xE1nyi, The Journal of Chemical Physics, 2023, URL: https://doi.org/10.1063/5.0155322\n\
+    \            "
+augmented_hydromace:
+  info: "\n        You're using the hydromace model. The model is released under the\
+    \ MIT license.\n        "
+hydromace:
+  info: "\n        You're using the hydromace model. The model is released under the\
+    \ MIT license.\n        "
+hydromace_qm9_only:
+  info: "\n        You're using the hydromace model. The model is released under the\
+    \ MIT license.\n        "
+hydromace_qm9_only_high_noise:
+  info: "\n        You're using the hydromace model. The model is released under the\
+    \ MIT license.\n        "
+hydromace_spice_only:
+  info: "\n        You're using the hydromace model. The model is released under the\
+    \ MIT license.\n        "
+hydromace_training:
+  info: Training data for the hydromace model. Combination of cleaned QM9, subset
+    of SPICE, and augmented with generated molecules.
+linker_examples:
+  info: You're using data from the DiffLinker paper. Please cite https://doi.org/10.48550/arXiv.2210.05274
+qm9_all:
+  info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22\
+    \ \n These data correspond to using OpenBabel to generate SMILES from the QM9\
+    \ dataset and removing fragmented or unsanitizable molecules."
+simgen_reference_data_large:
+  info: 'You''re using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22'
+simgen_reference_data_medium:
+  info: 'You''re using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22'
+simgen_reference_data_micro:
+  info: 'You''re using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22'
+simgen_reference_data_nano:
+  info: 'You''re using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22'
+simgen_reference_data_small:
+  info: 'You''re using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22'
+simgen_reference_data_tiny:
+  info: 'You''re using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22'
+simgen_spice_reference_data_large:
+  info: 'You''re using SPICE data. Please cite the SPICE dataset paper. URL: https://doi.org/10.1038/s41597-022-01882-6'
+simgen_spice_reference_data_medium:
+  info: 'You''re using SPICE data. Please cite the SPICE dataset paper. URL: https://doi.org/10.1038/s41597-022-01882-6'
+simgen_spice_reference_data_small:
+  info: 'You''re using SPICE data. Please cite the SPICE dataset paper. URL: https://doi.org/10.1038/s41597-022-01882-6'

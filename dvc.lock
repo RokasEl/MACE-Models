@@ -1,209 +1,5 @@
 schema: '2.0'
 stages:
-  ani500k_small:
-    cmd: zntrack run mace_models.LoadModel --name ani500k_small
-    deps:
-    - path: data/ani500k_small_DFT.model
-      hash: md5
-      md5: b33a3f83cf2a82b2b8aeafad1f32c36a
-      size: 3347420
-    outs:
-    - path: nodes/ani500k_small/node-meta.json
-      hash: md5
-      md5: b42bacbabcc21e078d4575e59e6816f6
-      size: 48
-  hydromace:
-    cmd: zntrack run mace_models.LoadModel --name hydromace
-    deps:
-    - path: data/qm9_and_spice_hydrogenation.model
-      hash: md5
-      md5: d4ed14179287ab35edf9cf519087ffb1
-      size: 18272799
-    outs:
-    - path: nodes/hydromace/node-meta.json
-      hash: md5
-      md5: 18062231c5b0ad51e133c3042395f94b
-      size: 64
-  reference_data:
-    cmd: zntrack run mace_models.XYZReader --name reference_data
-    deps:
-    - path: data/qm9_reference_data.xyz
-      hash: md5
-      md5: e2f1255b6a49f503d3de0f8b1ff78444
-      size: 66841
-    outs:
-    - path: nodes/reference_data/node-meta.json
-      hash: md5
-      md5: 626efc409a8ed4e098cb746998781264
-      size: 48
-  linker_examples:
-    cmd: zntrack run mace_models.XYZReader --name linker_examples
-    deps:
-    - path: data/zinc_fragments_difflinker.xyz
-      hash: md5
-      md5: 2c1c5785f40dab9dfd99e8f6d24d4fce
-      size: 495671
-    outs:
-    - path: nodes/linker_examples/node-meta.json
-      hash: md5
-      md5: c68b20760876b6c2a21305c222f30910
-      size: 48
-  qm9_medium_examples:
-    cmd: zntrack run mace_models.XYZReader --name qm9_medium_examples
-    deps:
-    - path: data/qm9_reference_data_medium.xyz
-      hash: md5
-      md5: e2052b156ad52faceba3bb7f8c4f1e43
-      size: 558035
-    outs:
-    - path: nodes/qm9_medium_examples/node-meta.json
-      hash: md5
-      md5: 985cf6d365141d1c392499ba5d069c4f
-      size: 48
-  simgen_reference_data_small:
-    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
-    deps:
-    - path: data/simgen_reference_data_small.xyz
-      hash: md5
-      md5: 966b771f36ef646979df7e4626079c61
-      size: 131545
-    outs:
-    - path: nodes/simgen_reference_data_small/node-meta.json
-      hash: md5
-      md5: fd86ddc3af889d25d550efffb365e3de
-      size: 64
-  simgen_reference_data_medium:
-    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_medium
-    deps:
-    - path: data/simgen_reference_data_medium.xyz
-      hash: md5
-      md5: eca5beb25973127dad9b9702afcc6df0
-      size: 279937
-    outs:
-    - path: nodes/simgen_reference_data_medium/node-meta.json
-      hash: md5
-      md5: 7ccf51d4875369fc97855f2af6892a1c
-      size: 64
-  MACE-MP-0_large:
-    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_large
-    deps:
-    - path: data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model
-      hash: md5
-      md5: b3c72742157485b46892333ec94e666d
-      size: 133800262
-    outs:
-    - path: nodes/MACE-MP-0_large/node-meta.json
-      hash: md5
-      md5: 8cc6ec2659b5bea79a5d5820b1aeb989
-      size: 48
-  MACE-MP-0:
-    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0
-    deps:
-    - path: data/2023-12-03-mace-128-L1_epoch-199.model
-      hash: md5
-      md5: df8f93b7f59fac854f73d1618fb2ba3d
-      size: 44422970
-    outs:
-    - path: nodes/MACE-MP-0/node-meta.json
-      hash: md5
-      md5: accc8a2fcb83d05845ed506eebcf9623
-      size: 48
-  MACE-MP-0_small:
-    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_small
-    deps:
-    - path: data/2023-12-10-mace-128-L0_energy_epoch-249.model
-      hash: md5
-      md5: 46c0d3cef9d863f285918bfaa66380c4
-      size: 32581838
-    outs:
-    - path: nodes/MACE-MP-0_small/node-meta.json
-      hash: md5
-      md5: 07216caf5db26a3957eeecce203f8b00
-      size: 48
-  OA_parent:
-    cmd: zntrack run mace_models.XYZReader --name OA_parent
-    deps:
-    - path: data/OA.xyz
-      hash: md5
-      md5: f82a1250e1c347a81b7bd0a4e50fce76
-      size: 4203
-    outs:
-    - path: nodes/OA_parent/node-meta.json
-      hash: md5
-      md5: 39da968568d0dc0ec603745465240317
-      size: 48
-  OA_ligands:
-    cmd: zntrack run mace_models.XYZReader --name OA_ligands
-    deps:
-    - path: data/OA_ligands.xyz
-      hash: md5
-      md5: e330d87ead7ab8c09e294775c51ad38c
-      size: 9224
-    outs:
-    - path: nodes/OA_ligands/node-meta.json
-      hash: md5
-      md5: b1d527fbfac733be215fc3bbf55c0d3b
-      size: 48
-  hydromace_qm9_only:
-    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only
-    deps:
-    - path: data/qm9_only_hydrogenation.model
-      hash: md5
-      md5: 1bf73fea6c187aea55ef451f268e8091
-      size: 18131399
-    outs:
-    - path: nodes/hydromace_qm9_only/node-meta.json
-      hash: md5
-      md5: 2cfac915f053e7eba9549ec28fa772b8
-      size: 64
-  hydromace_qm9_only_high_noise:
-    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only_high_noise
-    deps:
-    - path: data/qm9_only_hydrogenation_high_noise.model
-      hash: md5
-      md5: fddfea0a112f46f41a362f876400431e
-      size: 18132857
-    outs:
-    - path: nodes/hydromace_qm9_only_high_noise/node-meta.json
-      hash: md5
-      md5: bafdc19f22dfe583c87011b6495ca7b9
-      size: 64
-  hydromace_spice_only:
-    cmd: zntrack run mace_models.LoadModel --name hydromace_spice_only
-    deps:
-    - path: data/spice_only_hydrogenation.model
-      hash: md5
-      md5: 90d52c850d0a7a6fff7e1ae6492457cf
-      size: 18272563
-    outs:
-    - path: nodes/hydromace_spice_only/node-meta.json
-      hash: md5
-      md5: 4f7c78c39bc8d7a707428cb2af0b7761
-      size: 64
-  qm9_all:
-    cmd: zntrack run mace_models.XYZReader --name qm9_all
-    deps:
-    - path: data/qm9_cleaned.xyz
-      hash: md5
-      md5: 035118854874f78e603ff517ef09b76a
-      size: 298885228
-    outs:
-    - path: nodes/qm9_all/node-meta.json
-      hash: md5
-      md5: b5170b47cc1f498be9b02056c31668be
-      size: 64
-  simgen_reference_data_large:
-    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_large
-    deps:
-    - path: data/simgen_reference_data_large.xyz
-      hash: md5
-      md5: fd721474d02777e84dd66f5be32874c9
-      size: 576624
-    outs:
-    - path: nodes/simgen_reference_data_large/node-meta.json
-      hash: md5
-      md5: edb0a99aa202b972fa8517856b948641
-      size: 64
   DNA_example:
     cmd: zntrack run mace_models.XYZReader --name DNA_example
     deps:
@@ -211,11 +7,90 @@ stages:
       hash: md5
       md5: ec4eea6ba8e50e0a3fbb770d703de5a5
       size: 27810
+    params:
+      params.yaml:
+        DNA_example:
+          info:
     outs:
     - path: nodes/DNA_example/node-meta.json
       hash: md5
-      md5: 1b99a7bbe9fa7e2c738145845b1f82bf
-      size: 64
+      md5: 0bad392f5adf15027eeaf8b6d1f3416f
+      size: 154
+  MACE-MP-0:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0
+    deps:
+    - path: data/2023-12-03-mace-128-L1_epoch-199.model
+      hash: md5
+      md5: df8f93b7f59fac854f73d1618fb2ba3d
+      size: 44422970
+    params:
+      params.yaml:
+        MACE-MP-0:
+          info: "\n        You're using the MACE-MP-0 model. The model is released
+            under the MIT license.\n        Note:\n        If you are using this model,
+            please cite the relevant paper for the Materials Project,\n        any
+            paper associated with the MACE model, and also the following:\n      \
+            \  - MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b,\n\
+            \            DOI: 10.57967/hf/1202, URL: https://huggingface.co/cyrusyc/mace-universal\n\
+            \        - Matbench Discovery by Janosh Riebesell, Rhys EA Goodall, Philipp
+            Benner, Yuan Chiang,\n            Alpha A Lee, Anubhav Jain, Kristin A
+            Persson, 2023, arXiv:2308.14920\n        - https://arxiv.org/abs/2401.00096\n\
+            \           "
+    outs:
+    - path: nodes/MACE-MP-0/node-meta.json
+      hash: md5
+      md5: ecb8761cfa9cabbdb038db6d925c1c31
+      size: 154
+  MACE-MP-0_large:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_large
+    deps:
+    - path: data/2023-10-29-mace-16M-pbenner-mptrj-no-conditional-loss.model
+      hash: md5
+      md5: b3c72742157485b46892333ec94e666d
+      size: 133800262
+    params:
+      params.yaml:
+        MACE-MP-0_large:
+          info: "\n        You're using the MACE-MP-0_large model. The model is released
+            under the MIT license.\n        Note:\n        If you are using this model,
+            please cite the relevant paper for the Materials Project,\n        any
+            paper associated with the MACE model, and also the following:\n      \
+            \  - MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b,\n\
+            \            DOI: 10.57967/hf/1202, URL: https://huggingface.co/cyrusyc/mace-universal\n\
+            \        - Matbench Discovery by Janosh Riebesell, Rhys EA Goodall, Philipp
+            Benner, Yuan Chiang,\n            Alpha A Lee, Anubhav Jain, Kristin A
+            Persson, 2023, arXiv:2308.14920\n        - https://arxiv.org/abs/2401.00096\n\
+            \           "
+    outs:
+    - path: nodes/MACE-MP-0_large/node-meta.json
+      hash: md5
+      md5: 4968a7b78ed7325b7451de72c6b7808c
+      size: 154
+  MACE-MP-0_small:
+    cmd: zntrack run mace_models.LoadModel --name MACE-MP-0_small
+    deps:
+    - path: data/2023-12-10-mace-128-L0_energy_epoch-249.model
+      hash: md5
+      md5: 46c0d3cef9d863f285918bfaa66380c4
+      size: 32581838
+    params:
+      params.yaml:
+        MACE-MP-0_small:
+          info: "\n        You're using the MACE-MP-0_small model. The model is released
+            under the MIT license.\n        Note:\n        If you are using this model,
+            please cite the relevant paper for the Materials Project,\n        any
+            paper associated with the MACE model, and also the following:\n      \
+            \  - MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b,\n\
+            \            DOI: 10.57967/hf/1202, URL: https://huggingface.co/cyrusyc/mace-universal\n\
+            \        - Matbench Discovery by Janosh Riebesell, Rhys EA Goodall, Philipp
+            Benner, Yuan Chiang,\n            Alpha A Lee, Anubhav Jain, Kristin A
+            Persson, 2023, arXiv:2308.14920\n        - https://arxiv.org/abs/2401.00096\n\
+            \           "
+    outs:
+    - path: nodes/MACE-MP-0_small/node-meta.json
+      hash: md5
+      md5: 2b71b3794690a146254c0cc7d7905137
+      size: 153
   OA_docked:
     cmd: zntrack run mace_models.XYZReader --name OA_docked
     deps:
@@ -223,59 +98,69 @@ stages:
       hash: md5
       md5: a539606261c3f79fc24ea6c727e5d1c3
       size: 89384
+    params:
+      params.yaml:
+        OA_docked:
+          info:
     outs:
     - path: nodes/OA_docked/node-meta.json
       hash: md5
-      md5: 253fa23096a0d13c6c883ad28e0656f7
-      size: 64
-  simgen_spice_reference_data_small:
-    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_small
+      md5: b13f64c1e4d6b3239a9516811a43518d
+      size: 154
+  OA_ligands:
+    cmd: zntrack run mace_models.XYZReader --name OA_ligands
     deps:
-    - path: data/simgen_spice_reference_data_small.xyz
+    - path: data/OA_ligands.xyz
       hash: md5
-      md5: f9433b61ed669ba94f375dd2b458d818
-      size: 305377
+      md5: e330d87ead7ab8c09e294775c51ad38c
+      size: 9224
+    params:
+      params.yaml:
+        OA_ligands:
+          info:
     outs:
-    - path: nodes/simgen_spice_reference_data_small/node-meta.json
+    - path: nodes/OA_ligands/node-meta.json
       hash: md5
-      md5: cf7204c2c0394ff3f5e88552bc82f03e
-      size: 64
-  simgen_spice_reference_data_medium:
-    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_medium
+      md5: d20548fb9ae74fb97ac3f63a25ba8ba3
+      size: 154
+  OA_parent:
+    cmd: zntrack run mace_models.XYZReader --name OA_parent
     deps:
-    - path: data/simgen_spice_reference_data_medium.xyz
+    - path: data/OA.xyz
       hash: md5
-      md5: 676af749a5a2a3ee8e81e04e1a767521
-      size: 577548
+      md5: f82a1250e1c347a81b7bd0a4e50fce76
+      size: 4203
+    params:
+      params.yaml:
+        OA_parent:
+          info:
     outs:
-    - path: nodes/simgen_spice_reference_data_medium/node-meta.json
+    - path: nodes/OA_parent/node-meta.json
       hash: md5
-      md5: c2b9a9ec98aab18e62f4d98eecbdbe47
-      size: 64
-  simgen_spice_reference_data_large:
-    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_large
+      md5: 77508ff0c792f245aac63d4f4ab88edc
+      size: 154
+  ani500k_small:
+    cmd: zntrack run mace_models.LoadModel --name ani500k_small
     deps:
-    - path: data/simgen_spice_reference_data_large.xyz
+    - path: data/ani500k_small_DFT.model
       hash: md5
-      md5: 2d51833c8864d89feed622c98a2fc83e
-      size: 1063017
+      md5: b33a3f83cf2a82b2b8aeafad1f32c36a
+      size: 3347420
+    params:
+      params.yaml:
+        ani500k_small:
+          info: "\n        You're using the ani500k_small MACE model. The model is
+            released under the MIT license.\n        Note:\n        If you are using
+            this function, please cite the relevant paper associated with the MACE
+            model, ANI dataset, and also the following:\n        - \"Evaluation of
+            the MACE Force Field Architecture by Dávid Péter Kovács, Ilyes Batatia,
+            Eszter Sára Arany, and Gábor Csányi, The Journal of Chemical Physics,
+            2023, URL: https://doi.org/10.1063/5.0155322\n            "
     outs:
-    - path: nodes/simgen_spice_reference_data_large/node-meta.json
+    - path: nodes/ani500k_small/node-meta.json
       hash: md5
-      md5: 3b4312e96947ec7976017bfaf94058d0
-      size: 64
-  hydromace_training:
-    cmd: zntrack run mace_models.XYZReader --name hydromace_training
-    deps:
-    - path: data/hydromace_training_data_augmented.xyz
-      hash: md5
-      md5: 881c28538e6dc0d5a7189f995c4a38a4
-      size: 488977464
-    outs:
-    - path: nodes/hydromace_training/node-meta.json
-      hash: md5
-      md5: 9e38bf4d428324ea069b2fe605f264e4
-      size: 64
+      md5: 1700bd3ba533def5994dd77f574fa08c
+      size: 154
   augmented_hydromace:
     cmd: zntrack run mace_models.LoadModel --name augmented_hydromace
     deps:
@@ -283,23 +168,167 @@ stages:
       hash: md5
       md5: b7efad7c2bdd4c0c8722db6edf53d5dd
       size: 18272477
+    params:
+      params.yaml:
+        augmented_hydromace:
+          info: "\n        You're using the hydromace model. The model is released
+            under the MIT license.\n        "
     outs:
     - path: nodes/augmented_hydromace/node-meta.json
       hash: md5
-      md5: f8be8f9c0ddae8d68020533032740d27
-      size: 64
-  simgen_reference_data_nano:
-    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_nano
+      md5: 62757bdfe9b92fea78326718b5349f14
+      size: 154
+  hydromace:
+    cmd: zntrack run mace_models.LoadModel --name hydromace
     deps:
-    - path: data/simgen_reference_data_nano.xyz
+    - path: data/augmented_hydrogenation.model
       hash: md5
-      md5: e8990e34fb7c597265753d5b0c760f07
-      size: 15103
+      md5: b7efad7c2bdd4c0c8722db6edf53d5dd
+      size: 18272477
+    params:
+      params.yaml:
+        hydromace:
+          info: "\n        You're using the hydromace model. The model is released
+            under the MIT license.\n        "
     outs:
-    - path: nodes/simgen_reference_data_nano/node-meta.json
+    - path: nodes/hydromace/node-meta.json
       hash: md5
-      md5: 9b5853eaefdd708663066ec7057b4eb0
-      size: 64
+      md5: b8f45e08f937e361c34a45a0862aa8fa
+      size: 154
+  hydromace_qm9_only:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only
+    deps:
+    - path: data/qm9_only_hydrogenation.model
+      hash: md5
+      md5: 1bf73fea6c187aea55ef451f268e8091
+      size: 18131399
+    params:
+      params.yaml:
+        hydromace_qm9_only:
+          info: "\n        You're using the hydromace model. The model is released
+            under the MIT license.\n        "
+    outs:
+    - path: nodes/hydromace_qm9_only/node-meta.json
+      hash: md5
+      md5: a38349ac38408ff3ac1b1c7eb4172971
+      size: 154
+  hydromace_qm9_only_high_noise:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_qm9_only_high_noise
+    deps:
+    - path: data/qm9_only_hydrogenation_high_noise.model
+      hash: md5
+      md5: fddfea0a112f46f41a362f876400431e
+      size: 18132857
+    params:
+      params.yaml:
+        hydromace_qm9_only_high_noise:
+          info: "\n        You're using the hydromace model. The model is released
+            under the MIT license.\n        "
+    outs:
+    - path: nodes/hydromace_qm9_only_high_noise/node-meta.json
+      hash: md5
+      md5: 78632776ab6024171aa62ec3e8e53a1a
+      size: 154
+  hydromace_spice_only:
+    cmd: zntrack run mace_models.LoadModel --name hydromace_spice_only
+    deps:
+    - path: data/spice_only_hydrogenation.model
+      hash: md5
+      md5: 90d52c850d0a7a6fff7e1ae6492457cf
+      size: 18272563
+    params:
+      params.yaml:
+        hydromace_spice_only:
+          info: "\n        You're using the hydromace model. The model is released
+            under the MIT license.\n        "
+    outs:
+    - path: nodes/hydromace_spice_only/node-meta.json
+      hash: md5
+      md5: 7fe5297e98a1a457cd52073103d3c23a
+      size: 154
+  hydromace_training:
+    cmd: zntrack run mace_models.XYZReader --name hydromace_training
+    deps:
+    - path: data/hydromace_training_data_augmented.xyz
+      hash: md5
+      md5: 881c28538e6dc0d5a7189f995c4a38a4
+      size: 488977464
+    params:
+      params.yaml:
+        hydromace_training:
+          info: Training data for the hydromace model. Combination of cleaned QM9,
+            subset of SPICE, and augmented with generated molecules.
+    outs:
+    - path: nodes/hydromace_training/node-meta.json
+      hash: md5
+      md5: f41d2c0a103e65713d48604c3ed16c8f
+      size: 154
+  linker_examples:
+    cmd: zntrack run mace_models.XYZReader --name linker_examples
+    deps:
+    - path: data/zinc_fragments_difflinker.xyz
+      hash: md5
+      md5: 2c1c5785f40dab9dfd99e8f6d24d4fce
+      size: 495671
+    params:
+      params.yaml:
+        linker_examples:
+          info: You're using data from the DiffLinker paper. Please cite https://doi.org/10.48550/arXiv.2210.05274
+    outs:
+    - path: nodes/linker_examples/node-meta.json
+      hash: md5
+      md5: dd2984685244f9bd233fcb7ed9768fb2
+      size: 154
+  qm9_all:
+    cmd: zntrack run mace_models.XYZReader --name qm9_all
+    deps:
+    - path: data/qm9_cleaned.xyz
+      hash: md5
+      md5: 035118854874f78e603ff517ef09b76a
+      size: 298885228
+    params:
+      params.yaml:
+        qm9_all:
+          info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22
+            \n These data correspond to using OpenBabel to generate SMILES from the
+            QM9 dataset and removing fragmented or unsanitizable molecules."
+    outs:
+    - path: nodes/qm9_all/node-meta.json
+      hash: md5
+      md5: a9f817aa5322aced14cea538246dc915
+      size: 154
+  simgen_reference_data_large:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_large
+    deps:
+    - path: data/simgen_reference_data_large.xyz
+      hash: md5
+      md5: fd721474d02777e84dd66f5be32874c9
+      size: 576624
+    params:
+      params.yaml:
+        simgen_reference_data_large:
+          info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22"
+    outs:
+    - path: nodes/simgen_reference_data_large/node-meta.json
+      hash: md5
+      md5: 5f738bf4a2d8413eeff20d744c894866
+      size: 153
+  simgen_reference_data_medium:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_medium
+    deps:
+    - path: data/simgen_reference_data_medium.xyz
+      hash: md5
+      md5: eca5beb25973127dad9b9702afcc6df0
+      size: 279937
+    params:
+      params.yaml:
+        simgen_reference_data_medium:
+          info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22"
+    outs:
+    - path: nodes/simgen_reference_data_medium/node-meta.json
+      hash: md5
+      md5: aa18c7040d5eb4443a5643c971ce7b7b
+      size: 154
   simgen_reference_data_micro:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_micro
     deps:
@@ -307,11 +336,47 @@ stages:
       hash: md5
       md5: 8a1da6a4a3a80797ba1389fdbfb598aa
       size: 34719
+    params:
+      params.yaml:
+        simgen_reference_data_micro:
+          info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22"
     outs:
     - path: nodes/simgen_reference_data_micro/node-meta.json
       hash: md5
-      md5: 8925de618d317a2ef5ace0e32a7f63e7
-      size: 64
+      md5: f99be24c16d1d8064ed24fe1843078dc
+      size: 154
+  simgen_reference_data_nano:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_nano
+    deps:
+    - path: data/simgen_reference_data_nano.xyz
+      hash: md5
+      md5: e8990e34fb7c597265753d5b0c760f07
+      size: 15103
+    params:
+      params.yaml:
+        simgen_reference_data_nano:
+          info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22"
+    outs:
+    - path: nodes/simgen_reference_data_nano/node-meta.json
+      hash: md5
+      md5: e3ace7c270bbb98d65502ceeecbd0ac1
+      size: 153
+  simgen_reference_data_small:
+    cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_small
+    deps:
+    - path: data/simgen_reference_data_small.xyz
+      hash: md5
+      md5: 966b771f36ef646979df7e4626079c61
+      size: 131545
+    params:
+      params.yaml:
+        simgen_reference_data_small:
+          info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22"
+    outs:
+    - path: nodes/simgen_reference_data_small/node-meta.json
+      hash: md5
+      md5: 760ecd099b056eaa1a25e76afa331528
+      size: 154
   simgen_reference_data_tiny:
     cmd: zntrack run mace_models.XYZReader --name simgen_reference_data_tiny
     deps:
@@ -319,8 +384,63 @@ stages:
       hash: md5
       md5: b77841fb2c94ad55103f027372914ee7
       size: 64795
+    params:
+      params.yaml:
+        simgen_reference_data_tiny:
+          info: "You're using QM9 data. Please cite the QM9 dataset paper. URL: https://doi.org/10.1038/sdata.2014.22"
     outs:
     - path: nodes/simgen_reference_data_tiny/node-meta.json
       hash: md5
-      md5: cd32372f213e5b3d2a511b3e80e4d339
-      size: 64
+      md5: 372263b7d471eaa2de0c6b8e13bb6f55
+      size: 154
+  simgen_spice_reference_data_large:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_large
+    deps:
+    - path: data/simgen_spice_reference_data_large.xyz
+      hash: md5
+      md5: 2d51833c8864d89feed622c98a2fc83e
+      size: 1063017
+    params:
+      params.yaml:
+        simgen_spice_reference_data_large:
+          info: "You're using SPICE data. Please cite the SPICE dataset paper. URL:
+            https://doi.org/10.1038/s41597-022-01882-6"
+    outs:
+    - path: nodes/simgen_spice_reference_data_large/node-meta.json
+      hash: md5
+      md5: 09d4203ff37f8ce3b8e7fe169cd43ba7
+      size: 154
+  simgen_spice_reference_data_medium:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_medium
+    deps:
+    - path: data/simgen_spice_reference_data_medium.xyz
+      hash: md5
+      md5: 676af749a5a2a3ee8e81e04e1a767521
+      size: 577548
+    params:
+      params.yaml:
+        simgen_spice_reference_data_medium:
+          info: "You're using SPICE data. Please cite the SPICE dataset paper. URL:
+            https://doi.org/10.1038/s41597-022-01882-6"
+    outs:
+    - path: nodes/simgen_spice_reference_data_medium/node-meta.json
+      hash: md5
+      md5: 72b3b2842d03c5ce4d5ae83e533952c1
+      size: 154
+  simgen_spice_reference_data_small:
+    cmd: zntrack run mace_models.XYZReader --name simgen_spice_reference_data_small
+    deps:
+    - path: data/simgen_spice_reference_data_small.xyz
+      hash: md5
+      md5: f9433b61ed669ba94f375dd2b458d818
+      size: 305377
+    params:
+      params.yaml:
+        simgen_spice_reference_data_small:
+          info: "You're using SPICE data. Please cite the SPICE dataset paper. URL:
+            https://doi.org/10.1038/s41597-022-01882-6"
+    outs:
+    - path: nodes/simgen_spice_reference_data_small/node-meta.json
+      hash: md5
+      md5: b0f3382e2bfcccbf899b847eb151d730
+      size: 154

@@ -16,7 +16,7 @@ with project:
             """,
     )
     LoadModel(
-        model_path="data/qm9_and_spice_hydrogenation.model",
+        model_path="data/augmented_hydrogenation.model",
         name="hydromace",
         info="""
         You're using the hydromace model. The model is released under the MIT license.

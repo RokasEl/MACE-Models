@@ -1,6 +1,7 @@
 import functools
 
 import ase.io as aio
+import ase
 import torch
 import zntrack
 
@@ -19,7 +20,7 @@ You can install it via 'pip install git+https://github.com/ACEsuit/mace.git'
 
 class LoadModel(zntrack.Node):
     model_path: str = zntrack.deps_path()
-    info: str = zntrack.meta.Text(None)
+    info: str = zntrack.params(None)
 
     def _post_load_(self) -> None:
         if self.info is not None:
@@ -28,7 +29,6 @@ class LoadModel(zntrack.Node):
     def run(self) -> None:
         pass
 
-    @functools.lru_cache()
     def get_model(self, **kwargs) -> torch.nn.Module:
         with self.state.fs.open(self.model_path, "rb") as f:
             if kwargs.get("device", None) is None:
@@ -57,7 +57,7 @@ class LoadModel(zntrack.Node):
 
 class XYZReader(zntrack.Node):
     data_path: str = zntrack.deps_path()
-    info: str = zntrack.meta.Text(None)
+    info: str = zntrack.params(None)
 
     def _post_load_(self) -> None:
         if self.info is not None:
@@ -66,17 +66,19 @@ class XYZReader(zntrack.Node):
     def run(self) -> None:
         pass
 
-    @functools.lru_cache()
-    def get_atoms(self):
-        with self.state.fs.open(self.data_path, "r") as f:
-            return aio.read(f, format="extxyz", index=":")
+    @property
+    def frames(self) -> list[ase.Atoms]:
+        if "frames" not in self.__dict__:
+            with self.state.fs.open(self.data_path, "r") as f:
+                self.__dict__["frames"] = aio.read(f, format="extxyz", index=":")
+        return self.__dict__["frames"]
 
 
 @functools.wraps(LoadModel.from_rev)
 def load(
-    name: str = "medium_spice",
+    name: str = "MACE-MP-0",
     remote: str = "https://github.com/RokasEl/MACE-Models",
-    rev: str = None,
+    rev: str|None = None,
 ) -> LoadModel:
     """Load a pre-trained MACE model.
 
