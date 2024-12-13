@@ -25,10 +25,10 @@ stages:
   hydromace:
     cmd: zntrack run mace_models.LoadModel --name hydromace
     deps:
-    - path: data/qm9_and_spice_hydrogenation.model
+    - path: data/augmented_hydrogenation.model
       hash: md5
-      md5: 55fd4ee8f453f59cd2b48a97c2f0df66
-      size: 14021704
+      md5: b7efad7c2bdd4c0c8722db6edf53d5dd
+      size: 18272477
     params:
       params.yaml:
         hydromace:
@@ -37,7 +37,7 @@ stages:
     outs:
     - path: nodes/hydromace/node-meta.json
       hash: md5
-      md5: 050227d2c9f15a24964f6d169389b7f9
+      md5: bf473425ea42391dad879d36ff9b9593
       size: 154
   reference_data:
     cmd: zntrack run mace_models.XYZReader --name reference_data

@@ -11,7 +11,7 @@
             "_type": "pathlib.Path",
             "value": "nodes/hydromace"
         },
-        "model_path": "data/qm9_and_spice_hydrogenation.model"
+        "model_path": "data/augmented_hydrogenation.model"
     },
     "MACE-MP-0_large": {
         "nwd": {
